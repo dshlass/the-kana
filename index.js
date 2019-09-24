@@ -5,7 +5,9 @@ const  path = require('path');
 
 //files
 const hiragana = require('./data/hiragana')
+const hiraganaDakuon = require('./data/hiraganaDakuon')
 const katakana = require('./data/katakana')
+// const katakanaDakuon = require('./data/katakanaDakuon')
 
 const app = express()
 
@@ -39,8 +41,10 @@ app.get("/:characters", (req,res) => {
 app.get("/:characters/:sound", (req,res) => {
 
   const filePath = path.join(__dirname, `./data/basic_sounds/${req.params.sound}.mp3`);
-
-  if (req.params.characters === 'hg') {
+  if (req.params.characters === 'hg' && req.params.sound === "dakuon") {
+    res.status(200).send(hiraganaDakuon)
+  }
+  else if (req.params.characters === 'hg') {
     let hgFilter = hiragana.find(character => character.letter === req.params.sound)
     let toSend = {
       ...hgFilter,

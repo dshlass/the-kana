@@ -44,7 +44,7 @@ hiragana = [
     symbol: "さ"
   },
   {
-    letter: "si",
+    letter: "shi",
     symbol: "し"
   },
   {
@@ -64,11 +64,11 @@ hiragana = [
     symbol: "た"
   },
   {
-    letter: "ti",
+    letter: "chi",
     symbol: "ち"
   },
   {
-    letter: "tu",
+    letter: "tsu",
     symbol: "つ"
   },
   {
@@ -108,7 +108,7 @@ hiragana = [
     symbol: "ひ"
   },
   {
-    letter: "hu",
+    letter: "fu",
     symbol: "ふ"
   },
   {

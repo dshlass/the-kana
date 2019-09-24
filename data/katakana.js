@@ -44,7 +44,7 @@ katakana = [
     symbol: "サ"
   },
   {
-    letter: "si",
+    letter: "shi",
     symbol: "シ"
   },
   {
@@ -64,11 +64,11 @@ katakana = [
     symbol: "タ"
   },
   {
-    letter: "ti",
+    letter: "chi",
     symbol: "チ"
   },
   {
-    letter: "tu",
+    letter: "tsu",
     symbol: "ツ"
   },
   {
@@ -108,7 +108,7 @@ katakana = [
     symbol: "ヒ"
   },
   {
-    letter: "hu",
+    letter: "fu",
     symbol: "フ"
   },
   {

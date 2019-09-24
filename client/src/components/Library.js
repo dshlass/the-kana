@@ -1,30 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import FlashCard from './FlashCard';
+import React from 'react';
 
-function Library() {
-
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        'http://localhost:8080/hg',
-      );
-      setCards(result.data);
-    };
-    fetchData();
-  }, []);
-
+function Library({match}) {
   return (
     <div className="library">
-      {
-        cards.map((val, i) => (
-          <div key={i}>
-            <FlashCard data={val}/>
-          </div>
-        ))
-      }
+      <a href={`http://localhost:3000/hg`}>
+        <div className='card__top'>
+          <p>Hiragana</p>
+        </div>
+      </a>
+      <a href={`http://localhost:3000/kk`}>
+        <div className='card__top'>
+          <p>Katakana</p>
+        </div>
+      </a>
     </div>
   );
 }
