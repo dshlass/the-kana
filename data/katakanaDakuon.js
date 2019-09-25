@@ -1,87 +1,150 @@
 katakanaDakuon = [
   {
+    table: 'dakuon',
+    column: 'g',
+    row: 'a',
     letter: "ga",
-    symbol: "が"
+    symbol: "ガ"
   },
   {
+    table: 'dakuon',
+    column: 'g',
+    row: 'i',
     letter: "gi",
-    symbol: "ぎ"
+    symbol: "ギ"
   },
   {
+    table: 'dakuon',
+    column: 'g',
+    row: 'u',
     letter: "gu",
-    symbol: "ぐ"
+    symbol: "グ"
   },
   {
+    table: 'dakuon',
+    column: 'g',
+    row: 'e',
     letter: "ge",
-    symbol: "げ"
+    symbol: "ゲ"
   },
   {
+    table: 'dakuon',
+    column: 'g',
+    row: 'o',
     letter: "go",
-    symbol: "ご"
+    symbol: "ゴ"
   },
   {
+    table: 'dakuon',
+    column: 'z',
+    row: 'a',
     letter: "za",
-    symbol: "ざ"
+    symbol: "ザ"
   },
   {
+    table: 'dakuon',
+    column: 'z',
+    row: 'i',
     letter: "ji",
-    symbol: "じ"
+    symbol: "ジ"
   },
   {
+    table: 'dakuon',
+    column: 'z',
+    row: 'u',
     letter: "zu",
-    symbol: "ず"
+    symbol: "ズ"
   },
   {
+    table: 'dakuon',
+    column: 'z',
+    row: 'e',
     letter: "ze",
-    symbol: "ぜ"
+    symbol: "ゼ"
   },
   {
+    table: 'dakuon',
+    column: 'z',
+    row: 'o',
     letter: "zo",
-    symbol: "ぞ"
+    symbol: "ゾ"
   },
   {
+    table: 'dakuon',
+    column: 'd',
+    row: 'a',
     letter: "da",
-    symbol: "だ"
+    symbol: "ダ"
   },
   {
+    table: 'dakuon',
+    column: 'd',
+    row: 'i',
     letter: "dji",
-    symbol: "ぢ"
+    symbol: "ヂ"
   },
   {
+    table: 'dakuon',
+    column: 'd',
+    row: 'u',
     letter: "dzu",
-    symbol: "づ"
+    symbol: "ヅ"
   },
   {
+    table: 'dakuon',
+    column: 'd',
+    row: 'e',
     letter: "de",
-    symbol: "で"
+    symbol: "デ"
   },
   {
+    table: 'dakuon',
+    column: 'd',
+    row: 'o',
     letter: "do",
-    symbol: "ど"
+    symbol: "ド"
   },
   {
+    table: 'dakuon',
+    column: 'b',
+    row: 'a',
     letter: "ba",
-    symbol: "ば"
+    symbol: "バ"
   },
   {
+    table: 'dakuon',
+    column: 'b',
+    row: 'i',
     letter: "bi",
-    symbol: "び"
+    symbol: "ビ"
   },
   {
+    table: 'dakuon',
+    column: 'b',
+    row: 'u',
     letter: "bu",
-    symbol: "ぶ"
+    symbol: "ブ"
   },
   {
+    table: 'dakuon',
+    column: 'b',
+    row: 'e',
     letter: "be",
-    symbol: "べ"
+    symbol: "ベ"
   },
   {
+    table: 'dakuon',
+    column: 'b',
+    row: 'o',
     letter: "bo",
-    symbol: "ぼ"
+    symbol: "ボ"
   }
 ]
 
 module.exports = katakanaDakuon
+
+
+
 
 
 
