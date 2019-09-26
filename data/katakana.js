@@ -768,6 +768,13 @@ katakana = [
     row: "pause",
     letter: "pause",
     symbol: "ッ"
+  },
+  {
+    table: 'additional',
+    column: 'v',
+    row: 'v',
+    letter: 'v',
+    symbol: 'ヴ'
   }
 ];
 
