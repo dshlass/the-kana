@@ -23,18 +23,25 @@ import katakana from '../../data/katakana';
 //Sets the view to the table within the hiragana or katakana library
 const filterCards = (library, match) => {
   let filteredCards = library.filter(set => set.table === match.params.selection)
-  return filteredCards
+  if (match.params.rowcol === 'row') {
+    let filteredRow = filteredCards.filter(set => set.row === match.params.cards)
+    return filteredRow
+  }
+  else if (match.params.rowcol === 'column') {
+    let filteredColumn = filteredCards.filter(set => set.column === match.params.cards)
+    return filteredColumn
+  }
 }
 
-const sortSet = (cards, assign) => {
-  let sortedSet = []
-  for (let char of cards) {
-    if (!sortedSet.includes(char[assign]) && char[assign] !== 'n') {
-      sortedSet.push(char[assign])
-    }
-  }
-  return sortedSet
-}
+// const setCards = (cards, assign) => {
+//   let sortedSet = []
+//   for (let char of cards) {
+//     if (!sortedSet.includes(char[assign]) && char[assign] !== 'n') {
+//       sortedSet.push(char[assign])
+//     }
+//   }
+//   return sortedSet
+// }
 
 
 
@@ -60,54 +67,40 @@ const sortSet = (cards, assign) => {
 
 
 
-class Selection extends React.Component {
+class Cards extends React.Component {
 
   state={
-    row: [],
-    column:[]
+    cards: [],
   }
 
   componentDidMount() {
     let cards = setLibrary(this.props.match)
-    let row = sortSet(cards, 'row')
-    let column = sortSet(cards, 'column')
-
-    this.setState({row: row, column: column})
+    this.setState({cards: cards})
   }
+
+
 
 
 
 
   render () {
-    const {row, column} = this.state
+    const {cards} = this.state
     const {match} = this.props
 
     return (
-      <div className='selection'>
-      <div className="selection__left">
-        <h2>Rows</h2>
+      <div className='cards'>
         {
-          row.map((val, index) => (
+          cards.map((val, index) => (
             <div key={index} className="selection__card">
-              <Link to={`/${match.params.library}/${match.params.selection}/row/${val}`} className="selection__label">{val}</Link>
-            </div>
-          ))
-        }
-      </div>
-      <div className="selection__right">
-        <h2>Columns</h2>
-        {
-          column.map((val, index) => (
-            <div key={index} className="selection__card">
-              <Link to={`/${match.params.library}/${match.params.selection}/column/${val}`} className="selection__label">{val}</Link>
+              <Link to={`/${match.params.library}/${match.params.selection}/${val}`} className="selection__label">{val.symbol}</Link>
+              <p>{val.letter}</p>
             </div>
           ))
         }
         {/* <button onClick={this.updateCards}>Randomize</button> */}
-      </div>
     </div>
     );
   }
 }
 
-export default Selection
+export default Cards

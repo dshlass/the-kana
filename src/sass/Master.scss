@@ -1,56 +1,12 @@
+@import './normalize';
+@import '../components/Selection/Selection.scss';
+
 body {
   margin: 0;
-  padding: 80px;
 }
 
-.library {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px;
-
-}
-
-.card {
-  text-align: center;
-  border: 1px solid black;
-  padding: 20px;
-
-  &__top {
-    border-bottom: 1px solid black;
-    padding: 30px
-  }
-  &__bottom {
-    padding: 30px
-  }
-
-  &__letter, &__symbol {
-    font-size: 25px;
-  }
-
-  &37 {
-     grid-column-start: 3;
-     grid-column-end: 4;
-  }
-
-    &38 {
-     grid-column-start: 5;
-     grid-column-end: 6;
-  }
-    &46 {
-     grid-column-start: 4;
-     grid-column-end: 5;
-  }
-
-  &48 {
-    grid-column-start: 1;
-     grid-column-end: 6;
-  }
-
-
-}
-
-a {
-  text-decoration: none;
+h1, h2, h3,
+h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }

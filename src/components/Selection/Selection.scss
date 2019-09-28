@@ -1,0 +1,22 @@
+.selection {
+  display: flex;
+  text-align: center;
+
+  &__left {
+    flex: 1;
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    height: 125px;
+    margin: 30px auto;
+    justify-content: center;
+    background: grey;
+  }
+}
