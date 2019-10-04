@@ -67,6 +67,14 @@ class Selection extends React.Component {
     column:[]
   }
 
+  buildCards = (selection, match, rowCol) => {
+   return selection.map((val, index) => (
+            <div key={index} className="selection__card">
+              <Link to={`/${match.params.library}/${match.params.selection}/${rowCol}/${val}`} className="selection__label">{val}</Link>
+            </div>
+          ))
+  }
+
   componentDidMount() {
     let cards = setLibrary(this.props.match)
     let row = sortSet(cards, 'row')
@@ -84,27 +92,29 @@ class Selection extends React.Component {
 
     return (
       <div className='selection'>
-      <div className="selection__left">
+        {
+          (match.params.selection === 'other') ?
+          <div className="selection__left">
+            <h2>Other</h2>
+            {
+              this.buildCards(row, match, "row")
+            }
+          </div> :
+          <>
+          <div className="selection__left">
         <h2>Rows</h2>
         {
-          row.map((val, index) => (
-            <div key={index} className="selection__card">
-              <Link to={`/${match.params.library}/${match.params.selection}/row/${val}`} className="selection__label">{val}</Link>
-            </div>
-          ))
+          this.buildCards(row, match, "row")
         }
       </div>
       <div className="selection__right">
         <h2>Columns</h2>
         {
-          column.map((val, index) => (
-            <div key={index} className="selection__card">
-              <Link to={`/${match.params.library}/${match.params.selection}/column/${val}`} className="selection__label">{val}</Link>
-            </div>
-          ))
+          this.buildCards(column, match, "column")
         }
-        {/* <button onClick={this.updateCards}>Randomize</button> */}
       </div>
+  </>
+        }
     </div>
     );
   }
