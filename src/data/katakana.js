@@ -1,5 +1,6 @@
 export default [
   {
+    set: 'katakana',
     table: "gojuon",
     row: "a",
     column: "vowel",
@@ -7,6 +8,7 @@ export default [
     symbol: "ア"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     row: "i",
     column: "vowel",
@@ -14,6 +16,7 @@ export default [
     symbol: "イ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     row: "u",
     column: "vowel",
@@ -21,6 +24,7 @@ export default [
     symbol: "ウ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     row: "e",
     column: "vowel",
@@ -28,6 +32,7 @@ export default [
     symbol: "エ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     row: "o",
     column: "vowel",
@@ -35,6 +40,7 @@ export default [
     symbol: "オ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "k",
     row: "a",
@@ -42,6 +48,7 @@ export default [
     symbol: "カ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "k",
     row: "i",
@@ -49,6 +56,7 @@ export default [
     symbol: "キ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "k",
     row: "u",
@@ -56,6 +64,7 @@ export default [
     symbol: "ク"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "k",
     row: "e",
@@ -63,6 +72,7 @@ export default [
     symbol: "ケ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "k",
     row: "o",
@@ -70,6 +80,7 @@ export default [
     symbol: "コ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "s",
     row: "a",
@@ -77,6 +88,7 @@ export default [
     symbol: "サ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "s",
     row: "i",
@@ -84,6 +96,7 @@ export default [
     symbol: "シ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "s",
     row: "u",
@@ -91,6 +104,7 @@ export default [
     symbol: "ス"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "s",
     row: "e",
@@ -98,6 +112,7 @@ export default [
     symbol: "セ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "s",
     row: "o",
@@ -105,6 +120,7 @@ export default [
     symbol: "ソ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "t",
     row: "a",
@@ -112,6 +128,7 @@ export default [
     symbol: "タ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "t",
     row: "i",
@@ -119,6 +136,7 @@ export default [
     symbol: "チ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "t",
     row: "u",
@@ -126,6 +144,7 @@ export default [
     symbol: "ツ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "t",
     row: "e",
@@ -133,6 +152,7 @@ export default [
     symbol: "テ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "t",
     row: "o",
@@ -140,6 +160,7 @@ export default [
     symbol: "ト"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "a",
@@ -147,6 +168,7 @@ export default [
     symbol: "ナ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "i",
@@ -154,6 +176,7 @@ export default [
     symbol: "ニ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "u",
@@ -161,6 +184,7 @@ export default [
     symbol: "ヌ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "e",
@@ -168,6 +192,7 @@ export default [
     symbol: "ネ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "o",
@@ -175,6 +200,7 @@ export default [
     symbol: "ノ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "h",
     row: "a",
@@ -182,6 +208,7 @@ export default [
     symbol: "ハ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "h",
     row: "i",
@@ -189,6 +216,7 @@ export default [
     symbol: "ヒ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "h",
     row: "u",
@@ -196,6 +224,7 @@ export default [
     symbol: "フ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "h",
     row: "e",
@@ -203,6 +232,7 @@ export default [
     symbol: "ヘ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "h",
     row: "o",
@@ -210,6 +240,7 @@ export default [
     symbol: "ホ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "m",
     row: "a",
@@ -217,6 +248,7 @@ export default [
     symbol: "マ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "m",
     row: "i",
@@ -224,6 +256,7 @@ export default [
     symbol: "ミ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "m",
     row: "u",
@@ -231,6 +264,7 @@ export default [
     symbol: "ム"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "m",
     row: "e",
@@ -238,6 +272,7 @@ export default [
     symbol: "メ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "m",
     row: "o",
@@ -245,6 +280,7 @@ export default [
     symbol: "モ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "y",
     row: "a",
@@ -252,6 +288,7 @@ export default [
     symbol: "ヤ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "y",
     row: "u",
@@ -259,6 +296,7 @@ export default [
     symbol: "ユ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "y",
     row: "o",
@@ -266,6 +304,7 @@ export default [
     symbol: "ヨ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "r",
     row: "a",
@@ -273,6 +312,7 @@ export default [
     symbol: "ラ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "r",
     row: "i",
@@ -280,6 +320,7 @@ export default [
     symbol: "リ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "r",
     row: "u",
@@ -287,6 +328,7 @@ export default [
     symbol: "ル"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "r",
     row: "e",
@@ -294,6 +336,7 @@ export default [
     symbol: "レ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "r",
     row: "o",
@@ -301,6 +344,7 @@ export default [
     symbol: "ロ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "w",
     row: "a",
@@ -308,6 +352,7 @@ export default [
     symbol: "ワ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "w",
     row: "i",
@@ -315,6 +360,7 @@ export default [
     symbol: "ヰ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "w",
     row: "e",
@@ -322,6 +368,7 @@ export default [
     symbol: "ヱ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "w",
     row: "o",
@@ -329,6 +376,7 @@ export default [
     symbol: "ヲ"
   },
   {
+    set: 'katakana',
     table: "gojuon",
     column: "n",
     row: "n",
@@ -336,6 +384,7 @@ export default [
     symbol: "ン"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "g",
     row: "a",
@@ -343,6 +392,7 @@ export default [
     symbol: "ガ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "g",
     row: "i",
@@ -350,6 +400,7 @@ export default [
     symbol: "ギ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "g",
     row: "u",
@@ -357,6 +408,7 @@ export default [
     symbol: "グ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "g",
     row: "e",
@@ -364,6 +416,7 @@ export default [
     symbol: "ゲ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "g",
     row: "o",
@@ -371,6 +424,7 @@ export default [
     symbol: "ゴ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "z",
     row: "a",
@@ -378,6 +432,7 @@ export default [
     symbol: "ザ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "z",
     row: "i",
@@ -385,6 +440,7 @@ export default [
     symbol: "ジ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "z",
     row: "u",
@@ -392,6 +448,7 @@ export default [
     symbol: "ズ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "z",
     row: "e",
@@ -399,6 +456,7 @@ export default [
     symbol: "ゼ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "z",
     row: "o",
@@ -406,6 +464,7 @@ export default [
     symbol: "ゾ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "d",
     row: "a",
@@ -413,6 +472,7 @@ export default [
     symbol: "ダ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "d",
     row: "i",
@@ -420,6 +480,7 @@ export default [
     symbol: "ヂ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "d",
     row: "u",
@@ -427,6 +488,7 @@ export default [
     symbol: "ヅ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "d",
     row: "e",
@@ -434,6 +496,7 @@ export default [
     symbol: "デ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "d",
     row: "o",
@@ -441,6 +504,7 @@ export default [
     symbol: "ド"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "b",
     row: "a",
@@ -448,6 +512,7 @@ export default [
     symbol: "バ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "b",
     row: "i",
@@ -455,6 +520,7 @@ export default [
     symbol: "ビ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "b",
     row: "u",
@@ -462,6 +528,7 @@ export default [
     symbol: "ブ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "b",
     row: "e",
@@ -469,6 +536,7 @@ export default [
     symbol: "ベ"
   },
   {
+    set: 'katakana',
     table: "dakuon",
     column: "b",
     row: "o",
@@ -476,6 +544,7 @@ export default [
     symbol: "ボ"
   },
   {
+    set: 'katakana',
     table: "handakuon",
     column: "p",
     row: "a",
@@ -483,6 +552,7 @@ export default [
     symbol: "パ"
   },
   {
+    set: 'katakana',
     table: "handakuon",
     column: "p",
     row: "i",
@@ -490,6 +560,7 @@ export default [
     symbol: "ピ"
   },
   {
+    set: 'katakana',
     table: "handakuon",
     column: "p",
     row: "u",
@@ -497,6 +568,7 @@ export default [
     symbol: "プ"
   },
   {
+    set: 'katakana',
     table: "handakuon",
     column: "p",
     row: "e",
@@ -504,6 +576,7 @@ export default [
     symbol: "ペ"
   },
   {
+    set: 'katakana',
     table: "handakuon",
     column: "p",
     row: "o",
@@ -511,6 +584,7 @@ export default [
     symbol: "ポ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "k",
     row: "ya",
@@ -518,6 +592,7 @@ export default [
     symbol: "キャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "k",
     row: "yu",
@@ -525,6 +600,7 @@ export default [
     symbol: "キュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "k",
     row: "yo",
@@ -532,6 +608,7 @@ export default [
     symbol: "キョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "s",
     row: "ya",
@@ -539,6 +616,7 @@ export default [
     symbol: "シャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "s",
     row: "yu",
@@ -546,6 +624,7 @@ export default [
     symbol: "シュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "s",
     row: "yo",
@@ -553,6 +632,7 @@ export default [
     symbol: "ショ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "t",
     row: "ya",
@@ -560,6 +640,7 @@ export default [
     symbol: "チャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "t",
     row: "yu",
@@ -567,6 +648,7 @@ export default [
     symbol: "チュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "t",
     row: "yo",
@@ -574,6 +656,7 @@ export default [
     symbol: "チョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "n",
     row: "ya",
@@ -581,6 +664,7 @@ export default [
     symbol: "ニャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "n",
     row: "yu",
@@ -588,6 +672,7 @@ export default [
     symbol: "ニュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "n",
     row: "yo",
@@ -595,6 +680,7 @@ export default [
     symbol: "ニョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "h",
     row: "ya",
@@ -602,6 +688,7 @@ export default [
     symbol: "ヒャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "h",
     row: "yu",
@@ -609,6 +696,7 @@ export default [
     symbol: "ヒュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "h",
     row: "yo",
@@ -616,6 +704,7 @@ export default [
     symbol: "ヒョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "m",
     row: "ya",
@@ -623,6 +712,7 @@ export default [
     symbol: "ミャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "m",
     row: "yu",
@@ -630,6 +720,7 @@ export default [
     symbol: "ミュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "m",
     row: "yo",
@@ -637,6 +728,7 @@ export default [
     symbol: "ミョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "r",
     row: "ya",
@@ -644,6 +736,7 @@ export default [
     symbol: "リャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "r",
     row: "yu",
@@ -651,6 +744,7 @@ export default [
     symbol: "リュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "r",
     row: "yo",
@@ -658,6 +752,7 @@ export default [
     symbol: "リョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "g",
     row: "ya",
@@ -665,6 +760,7 @@ export default [
     symbol: "ギャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "g",
     row: "yu",
@@ -672,6 +768,7 @@ export default [
     symbol: "ギュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "g",
     row: "yo",
@@ -679,6 +776,7 @@ export default [
     symbol: "ギョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "z",
     row: "ya",
@@ -686,6 +784,7 @@ export default [
     symbol: "ジャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "z",
     row: "yu",
@@ -693,6 +792,7 @@ export default [
     symbol: "ジュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "z",
     row: "yo",
@@ -700,6 +800,7 @@ export default [
     symbol: "ジョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "d",
     row: "ya",
@@ -707,6 +808,7 @@ export default [
     symbol: "ヂャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "d",
     row: "yu",
@@ -714,6 +816,7 @@ export default [
     symbol: "ヂュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "d",
     row: "yo",
@@ -721,6 +824,7 @@ export default [
     symbol: "ヂョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "b",
     row: "ya",
@@ -728,6 +832,7 @@ export default [
     symbol: "ビャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "b",
     row: "yu",
@@ -735,6 +840,7 @@ export default [
     symbol: "ビュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "b",
     row: "yo",
@@ -742,6 +848,7 @@ export default [
     symbol: "ビョ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "p",
     row: "ya",
@@ -749,6 +856,7 @@ export default [
     symbol: "ピャ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "p",
     row: "yu",
@@ -756,6 +864,7 @@ export default [
     symbol: "ピュ"
   },
   {
+    set: 'katakana',
     table: "yoon",
     column: "p",
     row: "yo",
@@ -763,6 +872,7 @@ export default [
     symbol: "ピョ"
   },
   {
+    set: 'katakana',
     table: 'other',
     column: "pause",
     row: "pause",
@@ -770,6 +880,7 @@ export default [
     symbol: "ッ"
   },
   {
+    set: 'katakana',
     table: 'other',
     column: 'v',
     row: 'v',

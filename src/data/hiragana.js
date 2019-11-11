@@ -1,5 +1,6 @@
 export default [
   {
+    set: 'hiragana',
     table: 'gojuon',
     row: 'a',
     column: 'vowel',
@@ -7,6 +8,7 @@ export default [
     symbol: "あ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     row: 'i',
     column: 'vowel',
@@ -14,6 +16,7 @@ export default [
     symbol: "い"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     row: 'u',
     column: 'vowel',
@@ -21,6 +24,7 @@ export default [
     symbol: "う"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     row: 'e',
     column: 'vowel',
@@ -28,6 +32,7 @@ export default [
     symbol: "え"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     row: 'o',
     column: 'vowel',
@@ -35,6 +40,7 @@ export default [
     symbol: "お"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'k',
     row: 'a',
@@ -42,6 +48,7 @@ export default [
     symbol: "か"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'k',
     row: 'i',
@@ -49,6 +56,7 @@ export default [
     symbol: "き"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'k',
     row: 'u',
@@ -56,6 +64,7 @@ export default [
     symbol: "く"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'k',
     row: 'e',
@@ -63,6 +72,7 @@ export default [
     symbol: "け"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'k',
     row: 'o',
@@ -70,6 +80,7 @@ export default [
     symbol: "こ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'s',
     row: 'a',
@@ -77,6 +88,7 @@ export default [
     symbol: "さ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'s',
     row: 'i',
@@ -84,6 +96,7 @@ export default [
     symbol: "し"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'s',
     row: 'u',
@@ -91,6 +104,7 @@ export default [
     symbol: "す"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'s',
     row: 'e',
@@ -98,6 +112,7 @@ export default [
     symbol: "せ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'s',
     row: 'o',
@@ -105,6 +120,7 @@ export default [
     symbol: "そ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'t',
     row: 'a',
@@ -112,6 +128,7 @@ export default [
     symbol: "た"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'t',
     row: 'i',
@@ -119,6 +136,7 @@ export default [
     symbol: "ち"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'t',
     row: 'u',
@@ -126,6 +144,7 @@ export default [
     symbol: "つ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'t',
     row: 'e',
@@ -133,6 +152,7 @@ export default [
     symbol: "て"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'t',
     row: 'o',
@@ -140,6 +160,7 @@ export default [
     symbol: "と"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'a',
@@ -147,6 +168,7 @@ export default [
     symbol: "な"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'i',
@@ -154,6 +176,7 @@ export default [
     symbol: "に"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'u',
@@ -161,6 +184,7 @@ export default [
     symbol: "ぬ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'e',
@@ -168,6 +192,7 @@ export default [
     symbol: "ね"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'o',
@@ -175,6 +200,7 @@ export default [
     symbol: "の"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'h',
     row: 'a',
@@ -182,6 +208,7 @@ export default [
     symbol: "は"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'h',
     row: 'i',
@@ -189,6 +216,7 @@ export default [
     symbol: "ひ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'h',
     row: 'u',
@@ -196,6 +224,7 @@ export default [
     symbol: "ふ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'h',
     row: 'e',
@@ -203,6 +232,7 @@ export default [
     symbol: "へ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'h',
     row: 'o',
@@ -210,6 +240,7 @@ export default [
     symbol: "ほ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'m',
     row: 'a',
@@ -217,6 +248,7 @@ export default [
     symbol: "ま"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'m',
     row: 'i',
@@ -224,6 +256,7 @@ export default [
     symbol: "み"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'m',
     row: 'u',
@@ -231,6 +264,7 @@ export default [
     symbol: "む"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'m',
     row: 'e',
@@ -238,6 +272,7 @@ export default [
     symbol: "め"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'m',
     row: 'o',
@@ -245,6 +280,7 @@ export default [
     symbol: "も"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'y',
     row: 'a',
@@ -252,6 +288,7 @@ export default [
     symbol: "や"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'y',
     row: 'u',
@@ -259,6 +296,7 @@ export default [
     symbol: "ゆ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'y',
     row: 'o',
@@ -266,6 +304,7 @@ export default [
     symbol: "よ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'r',
     row: 'a',
@@ -273,6 +312,7 @@ export default [
     symbol: "ら"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'r',
     row: 'i',
@@ -280,6 +320,7 @@ export default [
     symbol: "り"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'r',
     row: 'u',
@@ -287,6 +328,7 @@ export default [
     symbol: "る"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'r',
     row: 'e',
@@ -294,6 +336,7 @@ export default [
     symbol: "れ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'r',
     row: 'o',
@@ -301,6 +344,7 @@ export default [
     symbol: "ろ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'w',
     row: 'a',
@@ -308,6 +352,7 @@ export default [
     symbol: "わ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'w',
     row: 'i',
@@ -315,6 +360,7 @@ export default [
     symbol: "ゐ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'w',
     row: 'e',
@@ -322,6 +368,7 @@ export default [
     symbol: "ゑ"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'w',
     row:'o',
@@ -329,6 +376,7 @@ export default [
     symbol: "を"
   },
   {
+    set: 'hiragana',
     table: 'gojuon',
     column:'n',
     row: 'n',
@@ -336,6 +384,7 @@ export default [
     symbol: "ん"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'g',
     row: 'a',
@@ -343,6 +392,7 @@ export default [
     symbol: "が"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'g',
     row: 'i',
@@ -350,6 +400,7 @@ export default [
     symbol: "ぎ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'g',
     row: 'u',
@@ -357,6 +408,7 @@ export default [
     symbol: "ぐ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'g',
     row: 'e',
@@ -364,6 +416,7 @@ export default [
     symbol: "げ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'g',
     row: 'o',
@@ -371,6 +424,7 @@ export default [
     symbol: "ご"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'z',
     row: 'a',
@@ -378,6 +432,7 @@ export default [
     symbol: "ざ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'z',
     row: 'i',
@@ -385,6 +440,7 @@ export default [
     symbol: "じ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'z',
     row: 'u',
@@ -392,6 +448,7 @@ export default [
     symbol: "ず"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'z',
     row: 'e',
@@ -399,6 +456,7 @@ export default [
     symbol: "ぜ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'z',
     row: 'o',
@@ -406,6 +464,7 @@ export default [
     symbol: "ぞ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'd',
     row: 'a',
@@ -413,6 +472,7 @@ export default [
     symbol: "だ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'd',
     row: 'i',
@@ -420,6 +480,7 @@ export default [
     symbol: "ぢ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'd',
     row: 'u',
@@ -427,6 +488,7 @@ export default [
     symbol: "づ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'd',
     row: 'e',
@@ -434,6 +496,7 @@ export default [
     symbol: "で"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'd',
     row: 'o',
@@ -441,6 +504,7 @@ export default [
     symbol: "ど"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'b',
     row: 'a',
@@ -448,6 +512,7 @@ export default [
     symbol: "ば"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'b',
     row: 'i',
@@ -455,6 +520,7 @@ export default [
     symbol: "び"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'b',
     row: 'u',
@@ -462,6 +528,7 @@ export default [
     symbol: "ぶ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'b',
     row: 'e',
@@ -469,6 +536,7 @@ export default [
     symbol: "べ"
   },
   {
+    set: 'hiragana',
     table: 'dakuon',
     column: 'b',
     row: 'o',
@@ -476,6 +544,7 @@ export default [
     symbol: "ぼ"
   },
   {
+    set: 'hiragana',
     table: 'handakuon',
     column: 'p',
     row: 'a',
@@ -483,6 +552,7 @@ export default [
     symbol: "ぱ"
   },
   {
+    set: 'hiragana',
     table: 'handakuon',
     column: 'p',
     row: 'i',
@@ -490,6 +560,7 @@ export default [
     symbol: "ぴ"
   },
   {
+    set: 'hiragana',
     table: 'handakuon',
     column: 'p',
     row: 'u',
@@ -497,6 +568,7 @@ export default [
     symbol: "ぷ"
   },
   {
+    set: 'hiragana',
     table: 'handakuon',
     column: 'p',
     row: 'e',
@@ -504,6 +576,7 @@ export default [
     symbol: "ぺ"
   },
   {
+    set: 'hiragana',
     table: 'handakuon',
     column: 'p',
     row: 'o',
@@ -511,6 +584,7 @@ export default [
     symbol: "ぽ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "k",
     row: "ya",
@@ -518,6 +592,7 @@ export default [
     symbol: "キャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "k",
     row: "yu",
@@ -525,6 +600,7 @@ export default [
     symbol: "キュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "k",
     row: "yo",
@@ -532,6 +608,7 @@ export default [
     symbol: "キョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "s",
     row: "ya",
@@ -539,6 +616,7 @@ export default [
     symbol: "シャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "s",
     row: "yu",
@@ -546,6 +624,7 @@ export default [
     symbol: "シュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "s",
     row: "yo",
@@ -553,6 +632,7 @@ export default [
     symbol: "ショ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "t",
     row: "ya",
@@ -560,6 +640,7 @@ export default [
     symbol: "チャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "t",
     row: "yu",
@@ -567,6 +648,7 @@ export default [
     symbol: "チュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "t",
     row: "yo",
@@ -574,6 +656,7 @@ export default [
     symbol: "チョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "n",
     row: "ya",
@@ -581,6 +664,7 @@ export default [
     symbol: "ニャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "n",
     row: "yu",
@@ -588,6 +672,7 @@ export default [
     symbol: "ニュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "n",
     row: "yo",
@@ -595,6 +680,7 @@ export default [
     symbol: "ニョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "h",
     row: "ya",
@@ -602,6 +688,7 @@ export default [
     symbol: "ヒャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "h",
     row: "yu",
@@ -609,6 +696,7 @@ export default [
     symbol: "ヒュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "h",
     row: "yo",
@@ -616,6 +704,7 @@ export default [
     symbol: "ヒョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "m",
     row: "ya",
@@ -623,6 +712,7 @@ export default [
     symbol: "ミャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "m",
     row: "yu",
@@ -630,6 +720,7 @@ export default [
     symbol: "ミュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "m",
     row: "yo",
@@ -637,6 +728,7 @@ export default [
     symbol: "ミョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "r",
     row: "ya",
@@ -644,6 +736,7 @@ export default [
     symbol: "リャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "r",
     row: "yu",
@@ -651,6 +744,7 @@ export default [
     symbol: "リュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "r",
     row: "yo",
@@ -658,6 +752,7 @@ export default [
     symbol: "リョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "g",
     row: "ya",
@@ -665,6 +760,7 @@ export default [
     symbol: "ギャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "g",
     row: "yu",
@@ -672,6 +768,7 @@ export default [
     symbol: "ギュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "g",
     row: "yo",
@@ -679,6 +776,7 @@ export default [
     symbol: "ギョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "z",
     row: "ya",
@@ -686,6 +784,7 @@ export default [
     symbol: "ジャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "z",
     row: "yu",
@@ -693,6 +792,7 @@ export default [
     symbol: "ジュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "z",
     row: "yo",
@@ -700,6 +800,7 @@ export default [
     symbol: "ジョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "d",
     row: "ya",
@@ -707,6 +808,7 @@ export default [
     symbol: "ヂャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "d",
     row: "yu",
@@ -714,6 +816,7 @@ export default [
     symbol: "ヂュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "d",
     row: "yo",
@@ -721,6 +824,7 @@ export default [
     symbol: "ヂョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "b",
     row: "ya",
@@ -728,6 +832,7 @@ export default [
     symbol: "ビャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "b",
     row: "yu",
@@ -735,6 +840,7 @@ export default [
     symbol: "ビュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "b",
     row: "yo",
@@ -742,6 +848,7 @@ export default [
     symbol: "ビョ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "p",
     row: "ya",
@@ -749,6 +856,7 @@ export default [
     symbol: "ピャ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "p",
     row: "yu",
@@ -756,6 +864,7 @@ export default [
     symbol: "ピュ"
   },
   {
+    set: 'hiragana',
     table: "yoon",
     column: "p",
     row: "yo",
@@ -763,6 +872,7 @@ export default [
     symbol: "ピョ"
   },
   {
+    set: 'hiragana',
     table: 'other',
     column: "pause",
     row: "pause",
@@ -770,6 +880,7 @@ export default [
     symbol: "ッ"
   },
   {
+    set: 'hiragana',
     table: 'other',
     column: 'v',
     row: 'v',
