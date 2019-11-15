@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-// import React from "react"
 import { Link } from 'gatsby';
 import { useKatakana } from '../hooks/useKatakana';
-import Grid from '../components/Grid/grid';
+import Review from '../components/Review/review';
 
 import Layout from '../components/Layouts/layout';
-// import Image from "../components/image"
 import SEO from '../components/seo';
 
 //grid columns
@@ -39,101 +37,38 @@ const Katakana = () => {
       <SEO title="Home" />
       <h1>Katakana</h1>
       {/* GOJUON */}
-      <div className="flex">
-        <div className="library__column">
-          {gojuonColumn.map((item, index) => (
-            <p key={index} className="library__column-item">
-              {item}
-            </p>
-          ))}
-        </div>
-        <div>
-          <div className="library__row">
-            {gojuonHead.map((item, index) => (
-              <p key={index} className="library__column-item">
-                {item}
-              </p>
-            ))}
-          </div>
-          <div className="library">
-            {state.gojuon.map((item, index) => {
-              return <Grid key={item.id} index={index} cardData={item} />;
-            })}
-          </div>
-        </div>
-      </div>
-      {/* DAKUON */}
-      <div className="flex">
-        <div className="library__column--dakuon">
-          {dakuonColumn.map((item, index) => (
-            <p key={index} className="library__column_item">
-              {item}
-            </p>
-          ))}
-        </div>
-        <div>
-          <div className="library__row">
-            {dakuonHead.map((item, index) => (
-              <p key={index} className="library__column-item">
-                {item}
-              </p>
-            ))}
-          </div>
-          <div className="library">
-            {state.dakuon.map((item, index) => {
-              return <Grid key={item.id} index={index} cardData={item} />;
-            })}
-          </div>
-        </div>
-      </div>
-      {/* HANDAKUON */}
-      <div className="flex">
-        <div className="library__column--handakuon">
-          {handakuonColumn.map((item, index) => (
-            <p key={index} className="library__column-item">
-              {item}
-            </p>
-          ))}
-        </div>
-        <div>
-          <div className="library__row">
-            {handakuonHead.map((item, index) => (
-              <p key={index} className="library__column-item">
-                {item}
-              </p>
-            ))}
-          </div>
-          <div className="library">
-            {state.handakuon.map((item, index) => {
-              return <Grid key={item.id} index={index} cardData={item} />;
-            })}
-          </div>
-        </div>
-      </div>
-      {/* YOON */}
-      <div className="flex">
-        <div className="library__column--yoon">
-          {yoonColumn.map((item, index) => (
-            <p key={index} className="library__column-item">
-              {item}
-            </p>
-          ))}
-        </div>
-        <div>
-          <div className="library__row--yoon">
-            {yoonHead.map((item, index) => (
-              <p key={index} className="library__column-item">
-                {item}
-              </p>
-            ))}
-          </div>
-          <div className="library--yoon">
-            {state.yoon.map((item, index) => {
-              return <Grid key={item.id} index={index} cardData={item} />;
-            })}
-          </div>
-        </div>
-      </div>
+      <Review
+        set={state.gojuon}
+        head={gojuonHead}
+        column={gojuonColumn}
+        columnClass={'library__column'}
+        headClass={'library__row'}
+        libraryClass={'library'}
+      />
+      <Review
+        set={state.dakuon}
+        head={dakuonHead}
+        column={dakuonColumn}
+        columnClass={'library__column--dakuon'}
+        headClass={'library__row'}
+        libraryClass={'library'}
+      />
+      <Review
+        set={state.handakuon}
+        head={handakuonHead}
+        column={handakuonColumn}
+        columnClass={'library__column--handakuon'}
+        headClass={'library__row'}
+        libraryClass={'library'}
+      />
+      <Review
+        set={state.yoon}
+        head={yoonHead}
+        column={yoonColumn}
+        columnClass={'library__column--yoon'}
+        headClass={'library__row--yoon'}
+        libraryClass={'library--yoon'}
+      />
       <button>Study</button>
       <Link to="/">Back</Link>
     </Layout>
