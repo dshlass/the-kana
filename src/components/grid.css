@@ -1,0 +1,35 @@
+.card {
+  text-align: center;
+  border: 1px solid black;
+  /* padding: 10px; */
+  /* --aspect-ratio: 1/1; */
+}
+.card__top {
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__symbol {
+  margin: 0;
+  font-size: 20px;
+}
+.card37 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.card38 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+.card46 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.card48 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
