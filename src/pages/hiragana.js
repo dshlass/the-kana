@@ -1,11 +1,10 @@
-/* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
 // import React from "react"
 import { Link } from 'gatsby';
 import { useHiragana } from '../hooks/useHiragana';
 import Grid from '../components/Grid/grid';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layouts/layout';
 // import Image from "../components/image"
 import SEO from '../components/seo';
 
@@ -36,108 +35,109 @@ const Hiragana = () => {
   return state.loading ? (
     <div>Loading</div>
   ) : (
-      <Layout>
-        <SEO title="Home" />
-        <h1>Hiragana</h1>
-        {/* GOJUON */}
-        <div className="flex">
-          <div className="library-column">
-            {gojuonColumn.map((item, index) => (
-              <p key={index} className="library-column__item">{item}
-              </p>
-            ))}
-          </div>
-          <div>
-            <div className="library-row">
-              {gojuonHead.map((item, index) => (
-                <p key={index} className="library-column__item">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div className="library">
-              {state.gojuon.map((item, index) => {
-                return <Grid key={item.id} index={index} cardData={item} />;
-              })}
-            </div>
-          </div>
+    <Layout>
+      <SEO title="Home" />
+      <h1>Katakana</h1>
+      {/* GOJUON */}
+      <div className="flex">
+        <div className="library__column">
+          {gojuonColumn.map((item, index) => (
+            <p key={index} className="library__column-item">
+              {item}
+            </p>
+          ))}
         </div>
-        {/* DAKUON */}
-        <div className="flex">
-          <div className="library-column">
-            {dakuonColumn.map((item, index) => (
-              <p key={index} className="library-column__item">
+        <div>
+          <div className="library__row">
+            {gojuonHead.map((item, index) => (
+              <p key={index} className="library__column-item">
                 {item}
               </p>
             ))}
           </div>
-          <div>
-            <div className="library-row">
-              {dakuonHead.map((item, index) => (
-                <p key={index} className="library-column__item">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div className="library">
-              {state.dakuon.map((item, index) => {
-                return <Grid key={item.id} index={index} cardData={item} />;
-              })}
-            </div>
+          <div className="library">
+            {state.gojuon.map((item, index) => {
+              return <Grid key={item.id} index={index} cardData={item} />;
+            })}
           </div>
         </div>
-        {/* HANDAKUON */}
-        <div className="flex">
-          <div className="library-column">
-            {handakuonColumn.map((item, index) => (
-              <p key={index} className="library-column__item">
+      </div>
+      {/* DAKUON */}
+      <div className="flex">
+        <div className="library__column--dakuon">
+          {dakuonColumn.map((item, index) => (
+            <p key={index} className="library__column_item">
+              {item}
+            </p>
+          ))}
+        </div>
+        <div>
+          <div className="library__row">
+            {dakuonHead.map((item, index) => (
+              <p key={index} className="library__column-item">
                 {item}
               </p>
             ))}
           </div>
-          <div>
-            <div className="library-row">
-              {handakuonHead.map((item, index) => (
-                <p key={index} className="library-column__item">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div className="library">
-              {state.handakuon.map((item, index) => {
-                return <Grid key={item.id} index={index} cardData={item} />;
-              })}
-            </div>
+          <div className="library">
+            {state.dakuon.map((item, index) => {
+              return <Grid key={item.id} index={index} cardData={item} />;
+            })}
           </div>
         </div>
-        {/* YOON */}
-        <div className="flex">
-          <div className="library-column--yoon">
-            {yoonColumn.map((item, index) => (
-              <p key={index} className="library-column__item">
+      </div>
+      {/* HANDAKUON */}
+      <div className="flex">
+        <div className="library__column--handakuon">
+          {handakuonColumn.map((item, index) => (
+            <p key={index} className="library__column-item">
+              {item}
+            </p>
+          ))}
+        </div>
+        <div>
+          <div className="library__row">
+            {handakuonHead.map((item, index) => (
+              <p key={index} className="library__column-item">
                 {item}
               </p>
             ))}
           </div>
-          <div>
-            <div className="library-row--yoon">
-              {yoonHead.map((item, index) => (
-                <p key={index} className="library-column__item">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div className="library--yoon">
-              {state.yoon.map((item, index) => {
-                return <Grid key={item.id} index={index} cardData={item} />;
-              })}
-            </div>
+          <div className="library">
+            {state.handakuon.map((item, index) => {
+              return <Grid key={item.id} index={index} cardData={item} />;
+            })}
           </div>
         </div>
-        <button>Study</button>
-        <Link to="/">Back</Link>
-      </Layout>
-    );
+      </div>
+      {/* YOON */}
+      <div className="flex">
+        <div className="library__column--yoon">
+          {yoonColumn.map((item, index) => (
+            <p key={index} className="library__column-item">
+              {item}
+            </p>
+          ))}
+        </div>
+        <div>
+          <div className="library__row--yoon">
+            {yoonHead.map((item, index) => (
+              <p key={index} className="library__column-item">
+                {item}
+              </p>
+            ))}
+          </div>
+          <div className="library--yoon">
+            {state.yoon.map((item, index) => {
+              return <Grid key={item.id} index={index} cardData={item} />;
+            })}
+          </div>
+        </div>
+      </div>
+      <button>Study</button>
+      <Link to="/">Back</Link>
+    </Layout>
+  );
 };
 
 export default Hiragana;

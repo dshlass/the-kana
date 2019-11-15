@@ -1,8 +1,9 @@
-import React from "react"
-import "./style.css"
+import React from 'react';
+import './card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({ cardData }) => {
-  console.log(cardData)
+  console.log(cardData);
 
   // const toggleClass = e => {
   //   console.log(e)
@@ -19,7 +20,12 @@ const Card = ({ cardData }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+//CHANGE IN THE FUTURE!!
+Card.propTypes = {
+  cardData: PropTypes.any
+};
+
+export default Card;

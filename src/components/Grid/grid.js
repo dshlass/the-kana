@@ -1,5 +1,6 @@
-import React from "react"
-import "./grid.css"
+import React from 'react';
+import './grid.css';
+import PropTypes from 'prop-types';
 
 const Grid = ({ cardData, index }) => {
   // console.log(cardData)
@@ -15,7 +16,13 @@ const Grid = ({ cardData, index }) => {
         </div> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Grid
+//CHANGE CARDDATA THE FUTURE!!
+Grid.propTypes = {
+  cardData: PropTypes.object,
+  index: PropTypes.number
+};
+
+export default Grid;
