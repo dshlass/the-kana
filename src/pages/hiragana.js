@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { useHiragana } from '../hooks/useHiragana';
-import Review from '../components/Review/review';
-import Study from '../components/Study/study';
+import Set from '../components/Set/Set';
 
 import Layout from '../components/Layouts/layout';
 import SEO from '../components/seo';
@@ -19,65 +18,112 @@ const dakuonHead = ['a', 'i', 'u', 'e', 'o'];
 const handakuonHead = ['a', 'i', 'u', 'e', 'o'];
 const yoonHead = ['ya', 'yu', 'yo'];
 
+const initialState = {
+  loading: true,
+  gojuonSelection: 'review',
+  dakuonSelection: 'review',
+  handakuonSelection: 'review',
+  yoonSelection: 'review'
+};
+
 const Hiragana = () => {
   const data = useHiragana().nodes;
-  const [state, setState] = useState({ loading: true });
+  const [state, setState] = useState(initialState);
 
   useEffect(() => {
     const gojuon = data.filter(item => item.table === 'gojuon');
     const dakuon = data.filter(item => item.table === 'dakuon');
     const handakuon = data.filter(item => item.table === 'handakuon');
     const yoon = data.filter(item => item.table === 'yoon');
-    setState({ gojuon, dakuon, handakuon, yoon, loading: false });
+
+    setState({ ...initialState, gojuon, dakuon, handakuon, yoon, loading: false });
   }, [data]);
 
-  const onStudy = e => {
-    console.log(e);
-  };
+  const changeMethod = e => {
+    e.preventDefault();
+    const set = e.currentTarget.name;
+    const selection = e.currentTarget.id;
 
-  console.log(state);
+    setState({ ...state, [set]: selection });
+  };
+  // console.log(state);
   return state.loading ? (
     <div>Loading</div>
   ) : (
     <Layout>
       <SEO title="Home" />
-      <h1>Katakana</h1>
+      <h1>Hiragana</h1>
       {/* GOJUON */}
-      <Review
+      <Set
         set={state.gojuon}
         head={gojuonHead}
         column={gojuonColumn}
         columnClass={'library__column'}
         headClass={'library__row'}
         libraryClass={'library'}
+        selection={state.gojuonSelection}
       />
-      <Study libraryClass={'library'} set={state.gojuon} />
-      <button onClick={e => onStudy(e)}>Study</button>
-      <Review
+
+      <button name="gojuonSelection" id="review" onClick={e => changeMethod(e)}>
+        Review
+      </button>
+
+      <button name="gojuonSelection" id="random" onClick={e => changeMethod(e)}>
+        Random
+      </button>
+      <Set
         set={state.dakuon}
         head={dakuonHead}
         column={dakuonColumn}
         columnClass={'library__column--dakuon'}
         headClass={'library__row'}
         libraryClass={'library'}
+        selection={state.dakuonSelection}
       />
-      <Review
+
+      <button name="dakuonSelection" id="review" onClick={e => changeMethod(e)}>
+        Review
+      </button>
+
+      <button name="dakuonSelection" id="random" onClick={e => changeMethod(e)}>
+        Random
+      </button>
+
+      <Set
         set={state.handakuon}
         head={handakuonHead}
         column={handakuonColumn}
         columnClass={'library__column--handakuon'}
         headClass={'library__row'}
         libraryClass={'library'}
+        selection={state.handakuonSelection}
       />
-      <Review
+
+      <button name="handakuonSelection" id="review" onClick={e => changeMethod(e)}>
+        Review
+      </button>
+
+      <button name="handakuonSelection" id="random" onClick={e => changeMethod(e)}>
+        Random
+      </button>
+      <Set
         set={state.yoon}
         head={yoonHead}
         column={yoonColumn}
         columnClass={'library__column--yoon'}
         headClass={'library__row--yoon'}
         libraryClass={'library--yoon'}
+        selection={state.yoonSelection}
       />
-      <button>Study</button>
+
+      <button name="yoonSelection" id="review" onClick={e => changeMethod(e)}>
+        Review
+      </button>
+
+      <button name="yoonSelection" id="random" onClick={e => changeMethod(e)}>
+        Random
+      </button>
+
       <Link to="/">Back</Link>
     </Layout>
   );

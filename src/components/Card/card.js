@@ -3,12 +3,6 @@ import './card.css';
 import PropTypes from 'prop-types';
 
 const Card = ({ cardData }) => {
-  console.log(cardData);
-
-  // const toggleClass = e => {
-  //   console.log(e)
-  //   // ontouchstart = "this.classList.toggle('hover');"
-  // }
   return (
     <div className="flip-container" key={cardData.id}>
       <div className="flipper">
