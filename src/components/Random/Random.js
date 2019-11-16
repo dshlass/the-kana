@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Card from '../Card/card';
 
@@ -22,15 +22,30 @@ const randomizeCards = arr => {
 };
 
 const Random = ({ set, libraryClass }) => {
-  const data = randomizeCards(set);
-  // console.log('random render');
-  return (
-    <div className={libraryClass}>
-      {data.map((item, index) => {
-        return <Card key={index} cardData={item} />;
-      })}
-    </div>
-  );
+  const [state, setState] = useState();
+
+  const blankArray = set.map((item, index) => (item[index] = {}));
+
+  useEffect(() => {
+    setState(randomizeCards(set));
+  }, [set]);
+  if (!state) {
+    return (
+      <div className={libraryClass}>
+        {blankArray.map((item, index) => {
+          return <Card key={index} cardData={item} />;
+        })}
+      </div>
+    );
+  } else {
+    return (
+      <div className={libraryClass}>
+        {state.map((item, index) => {
+          return <Card key={index} cardData={item} />;
+        })}
+      </div>
+    );
+  }
 };
 
 Random.propTypes = {

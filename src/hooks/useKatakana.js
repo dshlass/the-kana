@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 export const useKatakana = () => {
   const { allKatakanaJson } = useStaticQuery(graphql`
@@ -15,6 +15,6 @@ export const useKatakana = () => {
         }
       }
     }
-  `)
-  return allKatakanaJson
-}
+  `);
+  return allKatakanaJson;
+};

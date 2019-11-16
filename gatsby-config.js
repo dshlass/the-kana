@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Severus Snape',
     titleTemplate: '%s · The Real Hero',
-    description:
-      'Hogwarts Potions master, Head of Slytherin house and former Death Eater.',
+    description: 'Hogwarts Potions master, Head of Slytherin house and former Death Eater.',
     author: 'Dale Shlass',
     url: 'https://www.dshlass.github.io.com', // No trailing slash allowed!
     image: '/images/gatsby-icon.png', // Path to your image you placed in the 'static' folder

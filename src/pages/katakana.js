@@ -51,7 +51,7 @@ const Katakana = () => {
     <div>Loading</div>
   ) : (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Katakana" />
       <h1>Katakana</h1>
       {/* GOJUON */}
       <Set
@@ -62,15 +62,10 @@ const Katakana = () => {
         headClass={'library__row'}
         libraryClass={'library'}
         selection={state.gojuonSelection}
+        buttonName={'gojuonSelection'}
+        changeMethod={changeMethod}
+        toPage="katakana"
       />
-
-      <button name="gojuonSelection" id="review" onClick={e => changeMethod(e)}>
-        Review
-      </button>
-
-      <button name="gojuonSelection" id="random" onClick={e => changeMethod(e)}>
-        Random
-      </button>
       <Set
         set={state.dakuon}
         head={dakuonHead}
@@ -79,15 +74,10 @@ const Katakana = () => {
         headClass={'library__row'}
         libraryClass={'library'}
         selection={state.dakuonSelection}
+        buttonName={'dakuonSelection'}
+        changeMethod={changeMethod}
+        toPage="katakana"
       />
-
-      <button name="dakuonSelection" id="review" onClick={e => changeMethod(e)}>
-        Review
-      </button>
-
-      <button name="dakuonSelection" id="random" onClick={e => changeMethod(e)}>
-        Random
-      </button>
 
       <Set
         set={state.handakuon}
@@ -97,15 +87,10 @@ const Katakana = () => {
         headClass={'library__row'}
         libraryClass={'library'}
         selection={state.handakuonSelection}
+        buttonName={'handakuonSelection'}
+        changeMethod={changeMethod}
+        toPage="katakana"
       />
-
-      <button name="handakuonSelection" id="review" onClick={e => changeMethod(e)}>
-        Review
-      </button>
-
-      <button name="handakuonSelection" id="random" onClick={e => changeMethod(e)}>
-        Random
-      </button>
       <Set
         set={state.yoon}
         head={yoonHead}
@@ -114,15 +99,10 @@ const Katakana = () => {
         headClass={'library__row--yoon'}
         libraryClass={'library--yoon'}
         selection={state.yoonSelection}
+        buttonName={'yoonSelection'}
+        changeMethod={changeMethod}
+        toPage="katakana"
       />
-
-      <button name="yoonSelection" id="review" onClick={e => changeMethod(e)}>
-        Review
-      </button>
-
-      <button name="yoonSelection" id="random" onClick={e => changeMethod(e)}>
-        Random
-      </button>
 
       <Link to="/">Back</Link>
     </Layout>

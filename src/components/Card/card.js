@@ -19,7 +19,7 @@ const Card = ({ cardData }) => {
 
 //CHANGE IN THE FUTURE!!
 Card.propTypes = {
-  cardData: PropTypes.any
+  cardData: PropTypes.object
 };
 
 export default Card;

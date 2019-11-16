@@ -54,3 +54,11 @@ p {
     grid-template-columns: repeat(3, minmax(50px, 150px));
   }
 }
+
+.button {
+  border: none;
+  display: block;
+  padding: 10px 20px;
+  width: 85px;
+  margin-bottom: 50px;
+}

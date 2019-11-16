@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 export const useHiragana = () => {
   const { allHiraganaJson } = useStaticQuery(graphql`
@@ -15,6 +15,6 @@ export const useHiragana = () => {
         }
       }
     }
-  `)
-  return allHiraganaJson
-}
+  `);
+  return allHiraganaJson;
+};
