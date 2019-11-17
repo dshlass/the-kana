@@ -589,7 +589,7 @@
     "column": "k",
     "row": "ya",
     "letter": "kya",
-    "symbol": "キャ"
+    "symbol": "きゃ"
   },
   {
     "set": "hiragana",
@@ -597,7 +597,7 @@
     "column": "k",
     "row": "yu",
     "letter": "kyu",
-    "symbol": "キュ"
+    "symbol": "きゅ"
   },
   {
     "set": "hiragana",
@@ -605,7 +605,7 @@
     "column": "k",
     "row": "yo",
     "letter": "kyo",
-    "symbol": "キョ"
+    "symbol": "きょ"
   },
   {
     "set": "hiragana",
@@ -613,7 +613,7 @@
     "column": "s",
     "row": "ya",
     "letter": "sha",
-    "symbol": "シャ"
+    "symbol": "しゃ"
   },
   {
     "set": "hiragana",
@@ -621,7 +621,7 @@
     "column": "s",
     "row": "yu",
     "letter": "shu",
-    "symbol": "シュ"
+    "symbol": "しゅ"
   },
   {
     "set": "hiragana",
@@ -629,7 +629,7 @@
     "column": "s",
     "row": "yo",
     "letter": "sho",
-    "symbol": "ショ"
+    "symbol": "しょ"
   },
   {
     "set": "hiragana",
@@ -637,7 +637,7 @@
     "column": "t",
     "row": "ya",
     "letter": "cha",
-    "symbol": "チャ"
+    "symbol": "ちゃ"
   },
   {
     "set": "hiragana",
@@ -645,7 +645,7 @@
     "column": "t",
     "row": "yu",
     "letter": "chu",
-    "symbol": "チュ"
+    "symbol": "ちゅ"
   },
   {
     "set": "hiragana",
@@ -653,7 +653,7 @@
     "column": "t",
     "row": "yo",
     "letter": "cho",
-    "symbol": "チョ"
+    "symbol": "ちょ"
   },
   {
     "set": "hiragana",
@@ -661,7 +661,7 @@
     "column": "n",
     "row": "ya",
     "letter": "nya",
-    "symbol": "ニャ"
+    "symbol": "にゃ"
   },
   {
     "set": "hiragana",
@@ -669,7 +669,7 @@
     "column": "n",
     "row": "yu",
     "letter": "nyu",
-    "symbol": "ニュ"
+    "symbol": "にゅ"
   },
   {
     "set": "hiragana",
@@ -677,7 +677,7 @@
     "column": "n",
     "row": "yo",
     "letter": "nyo",
-    "symbol": "ニョ"
+    "symbol": "にょ"
   },
   {
     "set": "hiragana",
@@ -685,7 +685,7 @@
     "column": "h",
     "row": "ya",
     "letter": "hya",
-    "symbol": "ヒャ"
+    "symbol": "ひゃ"
   },
   {
     "set": "hiragana",
@@ -693,7 +693,7 @@
     "column": "h",
     "row": "yu",
     "letter": "hyu",
-    "symbol": "ヒュ"
+    "symbol": "ひゅ"
   },
   {
     "set": "hiragana",
@@ -701,7 +701,7 @@
     "column": "h",
     "row": "yo",
     "letter": "hyo",
-    "symbol": "ヒョ"
+    "symbol": "ひょ"
   },
   {
     "set": "hiragana",
@@ -709,7 +709,7 @@
     "column": "m",
     "row": "ya",
     "letter": "mya",
-    "symbol": "ミャ"
+    "symbol": "みゃ"
   },
   {
     "set": "hiragana",
@@ -717,7 +717,7 @@
     "column": "m",
     "row": "yu",
     "letter": "myu",
-    "symbol": "ミュ"
+    "symbol": "みゅ"
   },
   {
     "set": "hiragana",
@@ -725,7 +725,7 @@
     "column": "m",
     "row": "yo",
     "letter": "myo",
-    "symbol": "ミョ"
+    "symbol": "みょ"
   },
   {
     "set": "hiragana",
@@ -733,7 +733,7 @@
     "column": "r",
     "row": "ya",
     "letter": "rya",
-    "symbol": "リャ"
+    "symbol": "りゃ"
   },
   {
     "set": "hiragana",
@@ -741,7 +741,7 @@
     "column": "r",
     "row": "yu",
     "letter": "ryu",
-    "symbol": "リュ"
+    "symbol": "りゅ"
   },
   {
     "set": "hiragana",
@@ -749,7 +749,7 @@
     "column": "r",
     "row": "yo",
     "letter": "ryo",
-    "symbol": "リョ"
+    "symbol": "りょ"
   },
   {
     "set": "hiragana",
@@ -757,7 +757,7 @@
     "column": "g",
     "row": "ya",
     "letter": "gya",
-    "symbol": "ギャ"
+    "symbol": "ぎゃ"
   },
   {
     "set": "hiragana",
@@ -765,7 +765,7 @@
     "column": "g",
     "row": "yu",
     "letter": "gyu",
-    "symbol": "ギュ"
+    "symbol": "ぎゅ"
   },
   {
     "set": "hiragana",
@@ -773,7 +773,7 @@
     "column": "g",
     "row": "yo",
     "letter": "gyo",
-    "symbol": "ギョ"
+    "symbol": "ぎょ"
   },
   {
     "set": "hiragana",
@@ -781,7 +781,7 @@
     "column": "z",
     "row": "ya",
     "letter": "ja",
-    "symbol": "ジャ"
+    "symbol": "じゃ"
   },
   {
     "set": "hiragana",
@@ -789,7 +789,7 @@
     "column": "z",
     "row": "yu",
     "letter": "ju",
-    "symbol": "ジュ"
+    "symbol": "じゅ"
   },
   {
     "set": "hiragana",
@@ -797,7 +797,7 @@
     "column": "z",
     "row": "yo",
     "letter": "jo",
-    "symbol": "ジョ"
+    "symbol": "じょ"
   },
   {
     "set": "hiragana",
@@ -805,7 +805,7 @@
     "column": "d",
     "row": "ya",
     "letter": "ja",
-    "symbol": "ヂャ"
+    "symbol": "ぢゃ"
   },
   {
     "set": "hiragana",
@@ -813,7 +813,7 @@
     "column": "d",
     "row": "yu",
     "letter": "ju",
-    "symbol": "ヂュ"
+    "symbol": "ぢゅ"
   },
   {
     "set": "hiragana",
@@ -821,7 +821,7 @@
     "column": "d",
     "row": "yo",
     "letter": "jo",
-    "symbol": "ヂョ"
+    "symbol": "ぢょ"
   },
   {
     "set": "hiragana",
@@ -829,7 +829,7 @@
     "column": "b",
     "row": "ya",
     "letter": "bya",
-    "symbol": "ビャ"
+    "symbol": "びゃ"
   },
   {
     "set": "hiragana",
@@ -837,7 +837,7 @@
     "column": "b",
     "row": "yu",
     "letter": "byu",
-    "symbol": "ビュ"
+    "symbol": "びゅ"
   },
   {
     "set": "hiragana",
@@ -845,7 +845,7 @@
     "column": "b",
     "row": "yo",
     "letter": "byo",
-    "symbol": "ビョ"
+    "symbol": "びょ"
   },
   {
     "set": "hiragana",
@@ -853,7 +853,7 @@
     "column": "p",
     "row": "ya",
     "letter": "pya",
-    "symbol": "ピャ"
+    "symbol": "ぴゃ"
   },
   {
     "set": "hiragana",
@@ -861,7 +861,7 @@
     "column": "p",
     "row": "yu",
     "letter": "pyu",
-    "symbol": "ピュ"
+    "symbol": "ぴゅ"
   },
   {
     "set": "hiragana",
@@ -869,7 +869,7 @@
     "column": "p",
     "row": "yo",
     "letter": "pyo",
-    "symbol": "ピョ"
+    "symbol": "ぴょ"
   },
   {
     "set": "hiragana",
@@ -877,7 +877,7 @@
     "column": "pause",
     "row": "pause",
     "letter": "pause",
-    "symbol": "ッ"
+    "symbol": "っ"
   },
   {
     "set": "hiragana",

@@ -1,16 +1,44 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.the-kana.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
-    title: 'Severus Snape',
-    titleTemplate: '%s · The Real Hero',
-    description: 'Hogwarts Potions master, Head of Slytherin house and former Death Eater.',
-    author: 'Dale Shlass',
-    url: 'https://www.dshlass.github.io.com', // No trailing slash allowed!
-    image: '/images/gatsby-icon.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@occlumency'
+    title: 'The Kana', // Navigation and Site Title
+    description: 'Speed up your Hiragana and Katakana learning!',
+    author: `Dale Shlass`,
+    siteUrl
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -10,6 +10,26 @@ const initialState = {
   loading: true
 };
 
+//shuffling the answerArray
+const randomizeCards = arr => {
+  var currentIndex = arr.length,
+    temporaryValue,
+    randomIndex;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = arr[currentIndex];
+    arr[currentIndex] = arr[randomIndex];
+    arr[randomIndex] = temporaryValue;
+  }
+
+  return arr;
+};
+
 //TO IMPLEMENT
 // input starting array and full array
 // for loop from 1 to 4 (4 times)
@@ -20,14 +40,10 @@ const initialState = {
 // if it does, generate new number and try again. if not push to answrer array and remove va from placeholder array
 // return {question, answerArray, placeholder}
 //
-const gamify = (arr, full) => {
-  console.log(arr);
-  const placeholder = [...arr];
-  console.log(full);
+const gamify = (remainderArray, fullSet) => {
+  const placeholder = [...remainderArray];
   const answerArray = [];
   let question = '';
-  if (typeof arr === undefined || arr === [])
-    return { question: { symbol: '' }, answerArray: [], placeholder: [] };
 
   //random value from placeholder array
   const val = Math.floor(Math.random() * placeholder.length);
@@ -37,82 +53,28 @@ const gamify = (arr, full) => {
   let count = 0;
 
   while (answerArray.length <= 3 || count === 50) {
-    //random val from full array
-    const val = Math.floor(Math.random() * full.length);
-    let fullSelected = full[val];
+    // random val from fullSet array
+    const val = Math.floor(Math.random() * fullSet.length);
+    let fullArraySelected = fullSet[val];
     let match = false;
 
     answerArray.forEach(item => {
-      if (fullSelected.symbol === item.symbol) {
+      if (fullArraySelected.symbol === item.symbol) {
         match = true;
       }
     });
 
     if (match === false) {
-      answerArray.push(fullSelected);
+      answerArray.push(fullArraySelected);
     }
-  }
-  // for (let i = 1; i <= 4; i++) {
-  //   if (i < 4) {
-  //     const val = Math.floor(Math.random() * placeholder.length);
-  //     if (!placeholder[val]) break;
-  //     answerArray.push(placeholder[val]);
+  } //end of while
 
-  //     // If it's the last value, show the last value
-  //     if (placeholder.length === 1) {
-  //       question = placeholder[val];
-  //       break;
-  //     }
-  //     placeholder.splice(val, 1);
-  //   }
-  //   if (i === 4) {
-  //     const val = Math.floor(Math.random() * placeholder.length);
-  //     question = placeholder[val];
-  //     answerArray.push(placeholder[val]);
-  //     placeholder.splice(val, 1);
-  //   }
-  // }
   return {
     question,
-    answerArray,
+    answerArray: randomizeCards(answerArray),
     placeholder
   };
 };
-
-// const gamify = (arr, full) => {
-//   // console.log(arr);
-//   const placeholder = [...arr];
-//   console.log(full);
-//   const answerArray = [];
-//   let question = '';
-//   if (typeof arr === undefined || arr === [])
-//     return { question: { symbol: '' }, answerArray: [], placeholder: [] };
-//   for (let i = 1; i <= 4; i++) {
-//     if (i < 4) {
-//       const val = Math.floor(Math.random() * placeholder.length);
-//       if (!placeholder[val]) break;
-//       answerArray.push(placeholder[val]);
-
-//       // If it's the last value, show the last value
-//       if (placeholder.length === 1) {
-//         question = placeholder[val];
-//         break;
-//       }
-//       placeholder.splice(val, 1);
-//     }
-//     if (i === 4) {
-//       const val = Math.floor(Math.random() * placeholder.length);
-//       question = placeholder[val];
-//       answerArray.push(placeholder[val]);
-//       placeholder.splice(val, 1);
-//     }
-//   }
-//   return {
-//     question,
-//     answerArray,
-//     placeholder
-//   };
-// };
 
 const Test = ({ location }) => {
   const { set, toPage } = location.state;
@@ -122,24 +84,36 @@ const Test = ({ location }) => {
     setState({ ...initialState, loading: false, test: gamify(set, set) });
   }, [set]);
 
-  const handleClick = () => {
-    setState({ ...state, test: gamify(state.test.placeholder, set) });
+  const handleGame = (index, placeholder, fullSet) => {
+    const question = state.test.question.symbol;
+    const answer = state.test.answerArray[index].symbol;
+    if (answer === question && placeholder.length > 0) {
+      setState({ ...state, test: gamify(placeholder, fullSet) });
+    }
   };
 
-  console.log(state);
   return state.loading ? (
     <div>Loading</div>
   ) : (
     <Layout>
       <SEO title="Test" />
       <h1>Test</h1>
-      <p>{state.test.question.symbol || 'GAME COMPLETE'}</p>
-      <ul>
-        {(state.test.answerArray || []).map((item, index) => (
-          <li key={index}>{item.letter}</li>
-        ))}
-      </ul>
-      {!state.test.placeholder.length ? null : <button onClick={() => handleClick()}>GAME</button>}
+
+      {state.test.placeholder.length ? (
+        <>
+          <p>{state.test.question.symbol}</p>
+          <ul>
+            {(state.test.answerArray || []).map((item, index) => (
+              <button onClick={() => handleGame(index, state.test.placeholder, set)} key={index}>
+                {item.letter}
+              </button>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p>Game completed</p>
+      )}
+
       <Link to={`/${toPage}`}>Back</Link>
     </Layout>
   );
