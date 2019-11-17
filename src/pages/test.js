@@ -7,7 +7,9 @@ import Layout from '../components/Layouts/layout';
 import SEO from '../components/seo';
 
 const initialState = {
-  loading: true
+  loading: true,
+  score: 0,
+  click: 0
 };
 
 //shuffling the answerArray
@@ -80,16 +82,46 @@ const Test = ({ location }) => {
   const { set, toPage } = location.state;
   const [state, setState] = useState(initialState);
 
+  // const button1 = React.createRef();
+  // const button2 = React.createRef();
+  // const button3 = React.createRef();
+  // const button4 = React.createRef();
+
   useEffect(() => {
     setState({ ...initialState, loading: false, test: gamify(set, set) });
   }, [set]);
 
-  const handleGame = (index, placeholder, fullSet) => {
+  const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
-    if (answer === question && placeholder.length > 0) {
-      setState({ ...state, test: gamify(placeholder, fullSet) });
+    let button = e.currentTarget;
+    let score = state.score;
+    if (answer !== question && placeholder.length > 0) {
+      e.currentTarget.style.backgroundColor = 'red';
+      setTimeout(() => {
+        button.style.backgroundColor = '';
+        setState({ ...state, click: state.click + 1 });
+      }, 500);
     }
+    if (answer === question && placeholder.length > 0) {
+      e.currentTarget.style.backgroundColor = 'green';
+      setTimeout(() => {
+        button.style.backgroundColor = '';
+        if (state.click === 0) {
+          score = score + 1;
+        }
+        setState({ ...state, test: gamify(placeholder, fullSet), score, click: 0 });
+      }, 500);
+    }
+    // if (answer === question && placeholder.length > 0) {
+    //   let x = document.querySelectorAll('.answerButton');
+    //   x.forEach(button => (button.style.backgroundColor = 'red'));
+    //   x[index].style.backgroundColor = 'green';
+    //   setTimeout(() => {
+    //     x.forEach(button => (button.style.backgroundColor = ''));
+    //     setState({ ...state, test: gamify(placeholder, fullSet) });
+    //   }, 2000);
+    // }
   };
 
   return state.loading ? (
@@ -98,13 +130,17 @@ const Test = ({ location }) => {
     <Layout>
       <SEO title="Test" />
       <h1>Test</h1>
-
+      <p>{state.score}</p>
       {state.test.placeholder.length ? (
         <>
           <p>{state.test.question.symbol}</p>
           <ul>
             {(state.test.answerArray || []).map((item, index) => (
-              <button onClick={() => handleGame(index, state.test.placeholder, set)} key={index}>
+              <button
+                className="answerButton"
+                onClick={e => handleGame(index, state.test.placeholder, set, e)}
+                key={index}
+              >
                 {item.letter}
               </button>
             ))}
