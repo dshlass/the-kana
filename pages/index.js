@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Header from "../components/Header";
-
+export const config = { amp: hybrid }
 
 const Home = () => (
   <div>
