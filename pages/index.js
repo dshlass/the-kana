@@ -19,9 +19,9 @@ const Home = () => (
     <Nav />
     <Header />
     <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
+      <h1 className="title">Welcome to The-Kana!</h1>
       <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
+        Please select a Libray to study.
       </p>
     </div>
 

@@ -11,7 +11,13 @@ const Nav = () => {
       <ul>
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a
+              onMouseEnter={() => {
+                router.prefetch('/');
+              }}
+            >
+              Home
+            </a>
           </Link>
         </li>
         <li>
@@ -19,7 +25,6 @@ const Nav = () => {
             <a
               onMouseEnter={() => {
                 router.prefetch('/hiragana');
-                console.log('prefetching /hiragana!');
               }}
             >
               Hiragana
@@ -31,7 +36,6 @@ const Nav = () => {
             <a
               onMouseEnter={() => {
                 router.prefetch('/katakana');
-                console.log('prefetching /katakana!');
               }}
             >
               Katakana

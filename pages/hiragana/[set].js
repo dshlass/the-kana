@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from '../../components/nav';
+import Link from 'next/link'
 
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
@@ -149,7 +150,10 @@ const Set = () => {
       <Nav />
       <Header />
       <h1>Test</h1>
-      <p>{state.score}</p>
+      <h3>You receive a point if you correctly select the answer the first time. </h3>
+      <p>
+        Score: {state.score}/{test.length}
+      </p>
       {state.test.placeholder.length ? (
         <>
           <p>{state.test.question.symbol}</p>
@@ -168,6 +172,15 @@ const Set = () => {
       ) : (
         <p>Game completed</p>
       )}
+      <Link href="/hiragana">
+        <a
+          onMouseEnter={() => {
+            router.prefetch('/hiragana');
+          }}
+        >
+          Back
+        </a>
+      </Link>
     </>
   );
 };

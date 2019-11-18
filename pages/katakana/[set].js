@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import Nav from "../../components/nav";
-
+import Link from 'next/link'
 import { useRouter } from "next/router";
 import Header from "../../components/Header";
 import katakana from "../../data/katakana.json";
@@ -158,9 +158,7 @@ const Set = () => {
             {(state.test.answerArray || []).map((item, index) => (
               <button
                 className="answerButton"
-                onClick={e =>
-                  handleGame(index, state.test.placeholder, test, e)
-                }
+                onClick={e => handleGame(index, state.test.placeholder, test, e)}
                 key={index}
               >
                 {item.letter}
@@ -171,6 +169,15 @@ const Set = () => {
       ) : (
         <p>Game completed</p>
       )}
+      <Link href="/katakana">
+        <a
+          onMouseEnter={() => {
+            router.prefetch('/katakana');
+          }}
+        >
+          Back
+        </a>
+      </Link>
     </>
   );
 };

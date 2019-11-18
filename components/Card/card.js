@@ -20,7 +20,7 @@ const Card = ({ cardData }) => {
         }
         /* flip the pane when hovered */
         .flip-container:hover .flipper,
-        .flip-container.hover .flipper {
+        .flip-container:hover .flipper {
           transform: rotateY(180deg);
         }
 
@@ -28,7 +28,7 @@ const Card = ({ cardData }) => {
         .front,
         .back {
           width: 100%;
-          height: 27px;
+          height: 50px;
           text-align: center;
         }
 
@@ -43,6 +43,10 @@ const Card = ({ cardData }) => {
         /* hide back of pane during swap */
         .front,
         .back {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 2.25;
           backface-visibility: hidden;
           border: 1px solid black;
           position: absolute;
