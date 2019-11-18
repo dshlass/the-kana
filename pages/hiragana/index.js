@@ -6,7 +6,6 @@ import Set from "../../components/Set/Set";
 import hiragana from '../../data/hiragana.json'
 import Header from '../../components/Header'
 import Nav from '../../components/nav'
-import { useRouter } from 'next/router';
 
 
 //grid columns
@@ -40,7 +39,6 @@ const initialState = {
 
 // const Hiragana = ({data}) => {
 const Hiragana = () => {
-    const router = useRouter();
     const data = hiragana;
 
   // console.log(router)
@@ -81,86 +79,63 @@ const Hiragana = () => {
         <Header />
         <h1>Hiragana</h1>
         {/* GOJUON */}
-        <Set
-          set={state.gojuon}
-          head={gojuonHead}
-          column={gojuonColumn}
-          columnClass={'library__column'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.gojuonSelection}
-          buttonName={'gojuonSelection'}
-          changeMethod={changeMethod}
-        />
-        <Link href="/hiragana/[set]" as={`/hiragana/gojuon`}>
-          <a
-            onMouseEnter={() => {
-              router.prefetch('/hiragana/[set]');
-            }}
-          >
-            Test
-          </a>
-        </Link>
-        <Set
-          set={state.dakuon}
-          head={dakuonHead}
-          column={dakuonColumn}
-          columnClass={'library__column--dakuon'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.dakuonSelection}
-          buttonName={'dakuonSelection'}
-          changeMethod={changeMethod}
-        />
-        <Link href="/hiragana/[set]" as={`/hiragana/dakuon`}>
-          <a
-            onMouseEnter={() => {
-              router.prefetch('/hiragana/[set]');
-            }}
-          >
-            Test
-          </a>
-        </Link>
-        <Set
-          set={state.handakuon}
-          head={handakuonHead}
-          column={handakuonColumn}
-          columnClass={'library__column--handakuon'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.handakuonSelection}
-          buttonName={'handakuonSelection'}
-          changeMethod={changeMethod}
-        />
-        <Link href="/hiragana/[set]" as={`/hiragana/handakuon`}>
-          <a
-            onMouseEnter={() => {
-              router.prefetch('/hiragana/[set]');
-            }}
-          >
-            Test
-          </a>
-        </Link>
-        <Set
-          set={state.yoon}
-          head={yoonHead}
-          column={yoonColumn}
-          columnClass={'library__column--yoon'}
-          headClass={'library__row--yoon'}
-          libraryClass={'library--yoon'}
-          selection={state.yoonSelection}
-          buttonName={'yoonSelection'}
-          changeMethod={changeMethod}
-        />
-        <Link href="/hiragana/[set]" as={`/hiragana/yoon`}>
-          <a
-            onMouseEnter={() => {
-              router.prefetch('/hiragana/[set]');
-            }}
-          >
-            Test
-          </a>
-        </Link>
+        <div style={{ width: '80%', margin: '0 auto' }}>
+          <Set
+            set={state.gojuon}
+            head={gojuonHead}
+            column={gojuonColumn}
+            columnClass={'library__column'}
+            headClass={'library__row'}
+            libraryClass={'library'}
+            selection={state.gojuonSelection}
+            buttonName={'gojuonSelection'}
+            changeMethod={changeMethod}
+            library={'hiragana'}
+            setName={'gojuon'}
+          />
+
+          <Set
+            set={state.dakuon}
+            head={dakuonHead}
+            column={dakuonColumn}
+            columnClass={'library__column--dakuon'}
+            headClass={'library__row'}
+            libraryClass={'library'}
+            selection={state.dakuonSelection}
+            buttonName={'dakuonSelection'}
+            changeMethod={changeMethod}
+            library={'hiragana'}
+            setName={'dakuon'}
+          />
+
+          <Set
+            set={state.handakuon}
+            head={handakuonHead}
+            column={handakuonColumn}
+            columnClass={'library__column--handakuon'}
+            headClass={'library__row'}
+            libraryClass={'library'}
+            selection={state.handakuonSelection}
+            buttonName={'handakuonSelection'}
+            changeMethod={changeMethod}
+            library={'hiragana'}
+            setName={'handakuon'}
+          />
+
+          <Set
+            set={state.yoon}
+            head={yoonHead}
+            column={yoonColumn}
+            columnClass={'library__column--yoon'}
+            headClass={'library__row--yoon'}
+            libraryClass={'library--yoon'}
+            selection={state.yoonSelection}
+            buttonName={'yoonSelection'}
+            changeMethod={changeMethod}
+            library={'hiragana'}
+            setName={'yoon'}
+          />
+        </div>
 
         <Link href="/" as="/">
           <a>Back</a>

@@ -8,7 +8,6 @@ const Study = ({ set, libraryClass }) => {
       {set.map(item => {
         return <Card key={item.id} cardData={item} />;
       })}
-
     </div>
   );
 };
