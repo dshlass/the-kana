@@ -31,18 +31,23 @@ const Random = ({ set, libraryClass }) => {
   }, [set]);
   if (!state) {
     return (
-      <div className={libraryClass}>
-        {blankArray.map((item, index) => {
-          return <Card key={index} cardData={item} />;
-        })}
+      <div className="flex">
+        <div className={libraryClass}>
+          {blankArray.map((item, index) => {
+            return <Card key={index} cardData={item} />;
+          })}
+        </div>
+
       </div>
     );
   } else {
     return (
+      <div className="flex">
       <div className={libraryClass}>
         {state.map((item, index) => {
           return <Card key={index} cardData={item} />;
         })}
+      </div>
       </div>
     );
   }

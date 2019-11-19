@@ -1,6 +1,7 @@
 .flex {
   display: flex;
   justify-content: center;
+  margin: 0 20px;
 }
 
 .library {
@@ -37,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.25rem;
   }
 
   &__row {
