@@ -91,8 +91,7 @@ const gamify = (remainderArray, fullSet) => {
 
 const initialState = {
   loading: true,
-  score: 0,
-  click: 0
+  score: 0
 };
 
 const Set = () => {
@@ -100,8 +99,7 @@ const Set = () => {
   const { set } = router.query;
   const data = katakana;
   let test = setLibrary(set, data);
-  // console.log(test)
-  // console.log(router);
+
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
@@ -111,29 +109,38 @@ const Set = () => {
   const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
-    let button = e.currentTarget;
-    let score = state.score;
+
+    const allButtons = document.querySelectorAll("button")
+    console.log(allButtons)
+
     if (answer !== question && placeholder.length > 0) {
-      e.currentTarget.style.backgroundColor = "red";
+      allButtons.forEach( item => {
+        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
+      })
       setTimeout(() => {
-        button.style.backgroundColor = "";
-        setState({ ...state, click: state.click + 1 });
-      }, 500);
-    }
-    if (answer === question && placeholder.length > 0) {
-      e.currentTarget.style.backgroundColor = "green";
-      setTimeout(() => {
-        button.style.backgroundColor = "";
-        if (state.click === 0) {
-          score = score + 1;
-        }
+        allButtons.forEach(item => {
+         item.style.backgroundColor = '';
+        })
         setState({
-          ...state,
-          test: gamify(placeholder, fullSet),
-          score,
-          click: 0
-        });
-      }, 500);
+          ...state, test: gamify(placeholder, fullSet) });
+      }, 1000);
+    }
+
+    if (answer === question && placeholder.length > 0) {
+      allButtons.forEach( item => {
+        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
+      })
+      setTimeout(() => {
+        allButtons.forEach(item => {
+         item.style.backgroundColor = '';
+        })
+          setState({
+            ...state,
+            test: gamify(placeholder, fullSet),
+            score: state.score + 1,
+            click: 0
+          });
+      }, 1000);
     }
   };
 
@@ -153,11 +160,12 @@ const Set = () => {
       <p>{state.score}</p>
       {state.test.placeholder.length ? (
         <>
-          <p>{state.test.question.symbol}</p>
+          <p >{state.test.question.symbol}</p>
           <ul>
             {(state.test.answerArray || []).map((item, index) => (
               <button
                 className="answerButton"
+                id={item.symbol}
                 onClick={e => handleGame(index, state.test.placeholder, test, e)}
                 key={index}
               >
