@@ -1,4 +1,6 @@
 const withSass = require("@zeit/next-sass");
+// const withCSS = require('@zeit/next-css');
+
 const sitemap = require("nextjs-sitemap-generator");
 sitemap({
   baseUrl: "https://the-kana.com",

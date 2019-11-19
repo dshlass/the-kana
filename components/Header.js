@@ -1,6 +1,5 @@
-// import Link from "next/link";
-// import './Card/card.scss';
-// import './Grid/gris.scss';
+
+import '../styles/Master.scss'
 
 const Header = () => (
   <header>

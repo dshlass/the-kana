@@ -1,14 +1,26 @@
+p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.button {
+  border: none;
+  display: block;
+  padding: 10px 20px;
+  width: 85px;
+  margin-bottom: 50px;
+}
 .card {
   text-align: center;
   border: 1px solid black;
-  /* padding: 10px; */
-  /* --aspect-ratio: 1/1; */
+  height: 50px;
 }
 .card__top {
-  /* padding: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .card__symbol {
@@ -24,12 +36,11 @@
   grid-column-start: 5;
   grid-column-end: 6;
 }
-.card46 {
-  grid-column-start: 4;
-  grid-column-end: 5;
+.card45 {
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
-
-.card48 {
+.card46 {
   grid-column-start: 1;
   grid-column-end: 6;
 }

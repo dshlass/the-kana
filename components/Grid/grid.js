@@ -1,63 +1,42 @@
 import React from 'react';
-// import './grid.css';
 import PropTypes from 'prop-types';
 
 const Grid = ({ cardData, index }) => {
+  const track = React.createRef()
+  const controlButton = React.createRef()
+  function playPause() {
+    if (track.current.paused) {
+      track.current.play();
+      controlButton.current.className = "pause";
+  } else {
+      track.current.pause();
+      controlButton.current.className = "play";
+  }
+}
+
+const playAudio = () => {
+  var audio = new Audio(`./static/${cardData.table}/${cardData.letter}.mp3`);
+  audio.play();
+}
+
 
 
   return (
     <div className={`card card${index + 1}`}>
-      <div className="card__top">
+      <div role="button" className="card__top" onClick={() => playAudio()}>
         <p className="card__symbol">{cardData.symbol}</p>
         <p className="card__symbol">{cardData.letter}</p>
+        {/* <div>
+          <audio ref={track} id="track" onEnded={() => controlButton.current.className = "play"}>
+            <source src={`${cardData.sound}` || ''} type="audio/mpeg" />
+          </audio>
+
+          <div ref={controlButton} id="player-container" onClick={() => playPause()}>
+            <div id="play-pause" className="play">Play</div>
+          </div>
+        </div> */}
+        {/* <button onClick={() => playAudio()}>Play</button> */}
       </div>
-      <style global jsx>{`
-        p {
-          margin: 0;
-          font-size: 20px;
-        }
-
-        .button {
-          border: none;
-          display: block;
-          padding: 10px 20px;
-          width: 85px;
-          margin-bottom: 50px;
-        }
-        .card {
-          text-align: center;
-          border: 1px solid black;
-          height: 50px;
-        }
-        .card__top {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .card__symbol {
-          margin: 0;
-          font-size: 20px;
-        }
-        .card37 {
-          grid-column-start: 3;
-          grid-column-end: 4;
-        }
-
-        .card38 {
-          grid-column-start: 5;
-          grid-column-end: 6;
-        }
-        .card45 {
-          grid-column-start: 5;
-          grid-column-end: 6;
-        }
-        .card46 {
-          grid-column-start: 1;
-          grid-column-end: 6;
-        }
-
-      `}</style>
     </div>
   );
 };
@@ -69,3 +48,5 @@ Grid.propTypes = {
 };
 
 export default Grid;
+
+

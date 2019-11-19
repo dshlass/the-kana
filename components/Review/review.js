@@ -26,7 +26,7 @@ const Review = ({ set, head, column, columnClass, headClass, libraryClass }) => 
           })}
         </div>
       </div>
-      <style global jsx>
+      {/* <style global jsx>
         {`
         * {
           box-sizing: border-box
@@ -102,7 +102,7 @@ const Review = ({ set, head, column, columnClass, headClass, libraryClass }) => 
             grid-template-columns: repeat(3, minmax(50px, 150px));
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 };
