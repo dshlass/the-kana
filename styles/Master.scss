@@ -1,6 +1,10 @@
 //Normalizing the browser specific stylings
 @import './Normalize.scss';
 
+@import './Variables.scss';
+
+@import './Mixins.scss';
+
 @import './Grid.scss';
 
 @import './Card.scss';

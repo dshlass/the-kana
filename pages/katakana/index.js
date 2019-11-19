@@ -77,7 +77,7 @@ const Katakana = () => {
       <Nav />
       <Header />
       <h1>Katakana</h1>
-      <div style={{width: '80%', margin: '0 auto'}}>
+
 
         {/* GOJUON */}
         <Set
@@ -135,7 +135,7 @@ const Katakana = () => {
           library={'katakana'}
           setName={'yoon'}
         />
-      </div>
+
 
       <Link href="/" as="/">
         <a>Back</a>

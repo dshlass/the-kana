@@ -80,7 +80,6 @@ const Hiragana = () => {
         <Header />
         <h1>Hiragana</h1>
         {/* GOJUON */}
-        <div style={{ width: '80%', margin: '0 auto' }}>
           <Set
             set={state.gojuon}
             head={gojuonHead}
@@ -136,7 +135,6 @@ const Hiragana = () => {
             library={'hiragana'}
             setName={'yoon'}
           />
-        </div>
 
         <Link href="/" as="/">
           <a>Back</a>
