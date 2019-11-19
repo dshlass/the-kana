@@ -38,7 +38,7 @@ const initialState = {
   handakuonSelection: "review",
   yoonSelection: "review"
 };
-// const Katakana = ({ data }) => {
+
 const Katakana = () => {
   const data = katakana
   const [state, setState] = useState(initialState);

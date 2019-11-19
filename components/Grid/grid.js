@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Grid = ({ cardData, index }) => {
-  // console.log(cardData)
+
 
   return (
     <div className={`card card${index + 1}`}>
