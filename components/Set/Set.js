@@ -37,11 +37,13 @@ const Set = ({
           headClass={headClass}
           libraryClass={libraryClass}
         />
+        <div className="button-wrapper">
+
         <button name={buttonName} className="button" id="random" onClick={e => changeMethod(e)}>
           Random
         </button>
         <Link href={`/${library}/[set]`} as={`/${library}/${setName}`}>
-          <a
+            <a className="button"
             onMouseEnter={() => {
               router.prefetch(`/${library}/[set]`);
             }}
@@ -49,17 +51,20 @@ const Set = ({
             Test
           </a>
         </Link>
+        </div>
       </>
     );
   } else if (selection === 'random') {
     return (
       <>
         <Random set={state} libraryClass={libraryClass} />
+        <div className="button-wrapper">
+
         <button name={buttonName} className="button" id="review" onClick={e => changeMethod(e)}>
           Review
         </button>
         <Link href={`/${library}/[set]`} as={`/${library}/${setName}`}>
-          <a
+          <a className="button"
             onMouseEnter={() => {
               router.prefetch(`/${library}/[set]`);
             }}
@@ -67,6 +72,7 @@ const Set = ({
             Test
           </a>
         </Link>
+        </div>
       </>
     );
   }

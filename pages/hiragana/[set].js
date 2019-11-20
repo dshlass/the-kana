@@ -15,9 +15,6 @@ const setLibrary = (set, data) => {
   if (set === 'dakuon') {
     return data.filter(item => item.table === 'dakuon');
   }
-  if (set === 'handakuon') {
-    return data.filter(item => item.table === 'handakuon');
-  }
   if (set === 'yoon') {
     return data.filter(item => item.table === 'yoon');
   } else return data;
@@ -92,7 +89,6 @@ const gamify = (remainderArray, fullSet) => {
 const initialState = {
   loading: true,
   score: 0,
-  click: 0
 };
 
 const Set = () => {
@@ -100,40 +96,57 @@ const Set = () => {
   const { set } = router.query;
   const data = hiragana;
   let test = setLibrary(set, data);
-  // console.log(test)
-  // console.log(router);
+
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
     setState({ ...initialState, loading: false, test: gamify(test, test) });
   }, [set]);
 
+
+  const playAudio = () => {
+    var audio = new Audio(`../static/${state.test.question.table}/${state.test.question.letter}.mp3`);
+    audio.play();
+  }
+
   const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
-    let button = e.currentTarget;
-    let score = state.score;
+
+    const allButtons = document.querySelectorAll("button")
+    console.log(allButtons)
+
     if (answer !== question && placeholder.length > 0) {
-      e.currentTarget.style.backgroundColor = 'red';
+      allButtons.forEach(item => {
+        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
+      })
+      playAudio()
       setTimeout(() => {
-        button.style.backgroundColor = '';
-        setState({ ...state, click: state.click + 1 });
-      }, 500);
+        allButtons.forEach(item => {
+          item.style.backgroundColor = '';
+        })
+        setState({
+          ...state, test: gamify(placeholder, fullSet)
+        });
+      }, 1000);
     }
+
     if (answer === question && placeholder.length > 0) {
-      e.currentTarget.style.backgroundColor = 'green';
+      allButtons.forEach(item => {
+        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
+      })
+      playAudio()
       setTimeout(() => {
-        button.style.backgroundColor = '';
-        if (state.click === 0) {
-          score = score + 1;
-        }
+        allButtons.forEach(item => {
+          item.style.backgroundColor = '';
+        })
         setState({
           ...state,
           test: gamify(placeholder, fullSet),
-          score,
+          score: state.score + 1,
           click: 0
         });
-      }, 500);
+      }, 1000);
     }
   };
 
@@ -149,18 +162,18 @@ const Set = () => {
       </Head>
       <Nav />
       <Header />
-      <h1>Test</h1>
-      <h3>You receive a point if you correctly select the answer the first time. </h3>
-      <p>
+      <h1>Hiragana Test</h1>
+      <h2>
         Score: {state.score}/{test.length}
-      </p>
+      </h2>
       {state.test.placeholder.length ? (
-        <>
-          <p>{state.test.question.symbol}</p>
-          <ul>
+          <div className="test">
+          <p className="test__question">{state.test.question.symbol}</p>
+            <ul className="test__button-grid">
             {(state.test.answerArray || []).map((item, index) => (
               <button
-                className="answerButton"
+                className="test__answer"
+                id={item.symbol}
                 onClick={e => handleGame(index, state.test.placeholder, test, e)}
                 key={index}
               >
@@ -168,7 +181,7 @@ const Set = () => {
               </button>
             ))}
           </ul>
-        </>
+        </div>
       ) : (
         <p>Game completed</p>
       )}
@@ -185,16 +198,4 @@ const Set = () => {
   );
 };
 
-// Set.propTypes = {
-//   data: PropTypes.object
-// };
-
-// Set.getInitialProps = () => {
-//   return { data: hiragana };
-// };
-
 export default Set;
-
-// const Test = ({ location }) => {
-
-// export default Test;

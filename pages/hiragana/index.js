@@ -11,51 +11,43 @@ import Nav from '../../components/nav'
 //grid columns
 const gojuonColumn = ["", "", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n"];
 const yoonColumn = ["","k","s","c","n","h","m","r","g","j","b","p"];
-const dakuonColumn = ["", "g", "z", "d", "b"];
-const handakuonColumn = ["", "p"];
+const dakuonColumn = ["", "g", "z", "d", "b", "p"];
 
 //grid heads
 const gojuonHead = ["a", "i", "u", "e", "o"];
 const dakuonHead = ["a", "i", "u", "e", "o"];
-const handakuonHead = ["a", "i", "u", "e", "o"];
 const yoonHead = ["ya", "yu", "yo"];
 
 const initialState = {
   loading: true,
   gojuon: [
     {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
-    {},{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},{},{}
+    {},{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
   ],
-
-  dakuon: [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],
-  handakuon:[{},{},{},{},{}],
+  dakuon: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
+     {}, {}, {}, {}, {}, {}, {}],
   yoon:[
     {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},
-    {},{}, {}, {}, {}, {}, {}, {}, {}],
+    {},{}, {}, {}, {}, {}],
   gojuonSelection: "review",
   dakuonSelection: "review",
-  handakuonSelection: "review",
   yoonSelection: "review"
 };
 
-// const Hiragana = ({data}) => {
 const Hiragana = () => {
     const data = hiragana;
 
-  // console.log(router)
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
     const gojuon = data.filter(item => item.table === "gojuon");
     const dakuon = data.filter(item => item.table === "dakuon");
-    const handakuon = data.filter(item => item.table === "handakuon");
     const yoon = data.filter(item => item.table === "yoon");
 
     setState({
       ...initialState,
       gojuon,
       dakuon,
-      handakuon,
       yoon,
       loading: false
     });
@@ -80,6 +72,8 @@ const Hiragana = () => {
         <Header />
         <h1>Hiragana</h1>
         {/* GOJUON */}
+        <h2>Gojuon</h2>
+
           <Set
             set={state.gojuon}
             head={gojuonHead}
@@ -93,7 +87,7 @@ const Hiragana = () => {
             library={'hiragana'}
             setName={'gojuon'}
           />
-
+        <h2>Dakuon with Handakuon</h2>
           <Set
             set={state.dakuon}
             head={dakuonHead}
@@ -107,20 +101,7 @@ const Hiragana = () => {
             library={'hiragana'}
             setName={'dakuon'}
           />
-
-          <Set
-            set={state.handakuon}
-            head={handakuonHead}
-            column={handakuonColumn}
-            columnClass={'library__column--handakuon'}
-            headClass={'library__row'}
-            libraryClass={'library'}
-            selection={state.handakuonSelection}
-            buttonName={'handakuonSelection'}
-            changeMethod={changeMethod}
-            library={'hiragana'}
-            setName={'handakuon'}
-          />
+        <h2>Yoon</h2>
 
           <Set
             set={state.yoon}
@@ -142,9 +123,5 @@ const Hiragana = () => {
       </>
     );
 };
-
-// Hiragana.getInitialProps =  () => {
-//   return { data: hiragana };
-// };
 
 export default Hiragana;

@@ -1,0 +1,25 @@
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__question {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+  }
+
+  &__button-grid {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 20px;
+  }
+
+  &__answer {
+    background: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.75rem;
+  }
+}

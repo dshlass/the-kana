@@ -529,7 +529,7 @@
   },
   {
     "set": "katakana",
-    "table": "handakuon",
+    "table": "dakuon",
     "column": "p",
     "row": "a",
     "letter": "pa",
@@ -537,7 +537,7 @@
   },
   {
     "set": "katakana",
-    "table": "handakuon",
+    "table": "dakuon",
     "column": "p",
     "row": "i",
     "letter": "pi",
@@ -545,7 +545,7 @@
   },
   {
     "set": "katakana",
-    "table": "handakuon",
+    "table": "dakuon",
     "column": "p",
     "row": "u",
     "letter": "pu",
@@ -553,7 +553,7 @@
   },
   {
     "set": "katakana",
-    "table": "handakuon",
+    "table": "dakuon",
     "column": "p",
     "row": "e",
     "letter": "pe",
@@ -561,7 +561,7 @@
   },
   {
     "set": "katakana",
-    "table": "handakuon",
+    "table": "dakuon",
     "column": "p",
     "row": "o",
     "letter": "po",

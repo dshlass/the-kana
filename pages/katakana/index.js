@@ -12,13 +12,11 @@ import Header from "../../components/Header";
 //grid columns
 const gojuonColumn = ["", "", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n"];
 const yoonColumn = ["", "k", "s", "c", "n", "h", "m", "r", "g", "j", "b", "p"];
-const dakuonColumn = ["", "g", "z", "d", "b"];
-const handakuonColumn = ["", "p"];
+const dakuonColumn = ["", "g", "z", "d", "b", "p"];
 
 //grid heads
 const gojuonHead = ["a", "i", "u", "e", "o"];
 const dakuonHead = ["a", "i", "u", "e", "o"];
-const handakuonHead = ["a", "i", "u", "e", "o"];
 const yoonHead = ["ya", "yu", "yo"];
 
 const initialState = {
@@ -26,16 +24,15 @@ const initialState = {
   gojuon: [
     {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
     {}, {}, {}, {}, {},{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
-    {}, {}, {}, {}, {}, {}
+    {}, {}, {}, {}
   ],
-  dakuon: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
-  handakuon: [{}, {}, {}, {}, {}],
+  dakuon: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
+    {}, {}, {}, {} ,{}],
   yoon: [
     {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
-    {}, {}, {}, {}, {},{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    {}, {}, {}, {}, {},{}, {}, {}, {}, {}, {}],
   gojuonSelection: "review",
   dakuonSelection: "review",
-  handakuonSelection: "review",
   yoonSelection: "review"
 };
 
@@ -46,14 +43,12 @@ const Katakana = () => {
   useEffect(() => {
     const gojuon = data.filter(item => item.table === "gojuon");
     const dakuon = data.filter(item => item.table === "dakuon");
-    const handakuon = data.filter(item => item.table === "handakuon");
     const yoon = data.filter(item => item.table === "yoon");
 
     setState({
       ...initialState,
       gojuon,
       dakuon,
-      handakuon,
       yoon,
       loading: false
     });
@@ -109,20 +104,6 @@ const Katakana = () => {
         />
 
         <Set
-          set={state.handakuon}
-          head={handakuonHead}
-          column={handakuonColumn}
-          columnClass={'library__column--handakuon'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.handakuonSelection}
-          buttonName={'handakuonSelection'}
-          changeMethod={changeMethod}
-          library={'katakana'}
-          setName={'handakuon'}
-        />
-
-        <Set
           set={state.yoon}
           head={yoonHead}
           column={yoonColumn}
@@ -143,9 +124,5 @@ const Katakana = () => {
     </>
   );
 };
-
-// Katakana.getInitialProps = () => {
-//   return { data: katakana };
-// };
 
 export default Katakana;

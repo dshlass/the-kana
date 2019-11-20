@@ -11,8 +11,8 @@ const playAudio = () => {
 
 
   return (
-    <div className={`card card${index + 1}`}>
-      <div role="button" className="card__top" onClick={() => playAudio()}>
+    <div role="button" className={`card card${index + 1}`} onClick={() => playAudio()}>
+      <div className="card__top" >
         <p className="card__symbol">{cardData.symbol}</p>
         <p className="card__letter">{cardData.letter}</p>
       </div>

@@ -14,9 +14,6 @@ const setLibrary = (set, data) => {
   if (set === "dakuon") {
     return data.filter(item => item.table === "dakuon");
   }
-  if (set === "handakuon") {
-    return data.filter(item => item.table === "handakuon");
-  }
   if (set === "yoon") {
     return data.filter(item => item.table === "yoon");
   }
@@ -106,6 +103,11 @@ const Set = () => {
     setState({ ...initialState, loading: false, test: gamify(test, test) });
   }, [set]);
 
+  const playAudio = () => {
+    var audio = new Audio(`../static/${state.test.question.table}/${state.test.question.letter}.mp3`);
+    audio.play();
+  }
+
   const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
@@ -117,6 +119,7 @@ const Set = () => {
       allButtons.forEach( item => {
         item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
       })
+      playAudio()
       setTimeout(() => {
         allButtons.forEach(item => {
          item.style.backgroundColor = '';
@@ -130,6 +133,7 @@ const Set = () => {
       allButtons.forEach( item => {
         item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
       })
+      playAudio()
       setTimeout(() => {
         allButtons.forEach(item => {
          item.style.backgroundColor = '';
@@ -157,23 +161,25 @@ const Set = () => {
       <Nav />
       <Header />
       <h1>Test</h1>
-      <p>{state.score}</p>
+        <h2>
+          Score: {state.score}/{test.length}
+        </h2>
       {state.test.placeholder.length ? (
-        <>
-          <p >{state.test.question.symbol}</p>
-          <ul>
-            {(state.test.answerArray || []).map((item, index) => (
-              <button
-                className="answerButton"
-                id={item.symbol}
-                onClick={e => handleGame(index, state.test.placeholder, test, e)}
-                key={index}
-              >
-                {item.letter}
-              </button>
-            ))}
-          </ul>
-        </>
+          <div className="test">
+            <p className="test__question">{state.test.question.symbol}</p>
+            <ul className="test__button-grid">
+              {(state.test.answerArray || []).map((item, index) => (
+                <button
+                  className="test__answer"
+                  id={item.symbol}
+                  onClick={e => handleGame(index, state.test.placeholder, test, e)}
+                  key={index}
+                >
+                  {item.letter}
+                </button>
+              ))}
+            </ul>
+          </div>
       ) : (
         <p>Game completed</p>
       )}
@@ -190,16 +196,4 @@ const Set = () => {
   );
 };
 
-// Set.propTypes = {
-//   data: PropTypes.object
-// };
-
-// Set.getInitialProps = () => {
-//   return { data: katakana };
-// };
-
 export default Set;
-
-// const Test = ({ location }) => {
-
-// export default Test;
