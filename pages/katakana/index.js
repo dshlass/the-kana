@@ -77,9 +77,8 @@ const Katakana = () => {
         }}>
         </script>
       </Head>
-      <body>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBWHN5N"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBWHN5N"
+        style={{ display: 'none', visibility: 'hidden', height: 0, width: 0 }}></iframe></noscript>
         <Nav />
         <Header />
         <h1>Katakana</h1>
@@ -131,8 +130,7 @@ const Katakana = () => {
 
         <Link href="/" as="/">
           <a>Back</a>
-        </Link>
-      </body>
+        </Link>>
     </>
   );
 };
