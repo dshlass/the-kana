@@ -77,58 +77,62 @@ const Katakana = () => {
         }}>
         </script>
       </Head>
-      <Nav />
-      <Header />
-      <h1>Katakana</h1>
+      <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBWHN5N"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <Nav />
+        <Header />
+        <h1>Katakana</h1>
 
 
-        {/* GOJUON */}
-        <Set
-          set={state.gojuon}
-          head={gojuonHead}
-          column={gojuonColumn}
-          columnClass={'library__column'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.gojuonSelection}
-          buttonName={'gojuonSelection'}
-          changeMethod={changeMethod}
-          library={'katakana'}
-          setName={'gojuon'}
-        />
+          {/* GOJUON */}
+          <Set
+            set={state.gojuon}
+            head={gojuonHead}
+            column={gojuonColumn}
+            columnClass={'library__column'}
+            headClass={'library__row'}
+            libraryClass={'library'}
+            selection={state.gojuonSelection}
+            buttonName={'gojuonSelection'}
+            changeMethod={changeMethod}
+            library={'katakana'}
+            setName={'gojuon'}
+          />
 
-        <Set
-          set={state.dakuon}
-          head={dakuonHead}
-          column={dakuonColumn}
-          columnClass={'library__column--dakuon'}
-          headClass={'library__row'}
-          libraryClass={'library'}
-          selection={state.dakuonSelection}
-          buttonName={'dakuonSelection'}
-          changeMethod={changeMethod}
-          library={'katakana'}
-          setName={'dakuon'}
-        />
+          <Set
+            set={state.dakuon}
+            head={dakuonHead}
+            column={dakuonColumn}
+            columnClass={'library__column--dakuon'}
+            headClass={'library__row'}
+            libraryClass={'library'}
+            selection={state.dakuonSelection}
+            buttonName={'dakuonSelection'}
+            changeMethod={changeMethod}
+            library={'katakana'}
+            setName={'dakuon'}
+          />
 
-        <Set
-          set={state.yoon}
-          head={yoonHead}
-          column={yoonColumn}
-          columnClass={'library__column--yoon'}
-          headClass={'library__row--yoon'}
-          libraryClass={'library--yoon'}
-          selection={state.yoonSelection}
-          buttonName={'yoonSelection'}
-          changeMethod={changeMethod}
-          library={'katakana'}
-          setName={'yoon'}
-        />
+          <Set
+            set={state.yoon}
+            head={yoonHead}
+            column={yoonColumn}
+            columnClass={'library__column--yoon'}
+            headClass={'library__row--yoon'}
+            libraryClass={'library--yoon'}
+            selection={state.yoonSelection}
+            buttonName={'yoonSelection'}
+            changeMethod={changeMethod}
+            library={'katakana'}
+            setName={'yoon'}
+          />
 
 
-      <Link href="/" as="/">
-        <a>Back</a>
-      </Link>
+        <Link href="/" as="/">
+          <a>Back</a>
+        </Link>
+      </body>
     </>
   );
 };

@@ -76,58 +76,60 @@ const Hiragana = () => {
           }}>
           </script>
         </Head>
-        <Nav />
-        <Header />
-        <h1>Hiragana</h1>
-        {/* GOJUON */}
-        <h2>Gojuon</h2>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBWHN5N"
+          style={{ display: 'none', visibility: 'hidden', height: 0, width: 0 }}></iframe></noscript>
+          <Nav />
+          <Header />
+          <h1>Hiragana</h1>
+          {/* GOJUON */}
+          <h2>Gojuon</h2>
 
-          <Set
-            set={state.gojuon}
-            head={gojuonHead}
-            column={gojuonColumn}
-            columnClass={'library__column'}
-            headClass={'library__row'}
-            libraryClass={'library'}
-            selection={state.gojuonSelection}
-            buttonName={'gojuonSelection'}
-            changeMethod={changeMethod}
-            library={'hiragana'}
-            setName={'gojuon'}
-          />
-        <h2>Dakuon with Handakuon</h2>
-          <Set
-            set={state.dakuon}
-            head={dakuonHead}
-            column={dakuonColumn}
-            columnClass={'library__column--dakuon'}
-            headClass={'library__row'}
-            libraryClass={'library'}
-            selection={state.dakuonSelection}
-            buttonName={'dakuonSelection'}
-            changeMethod={changeMethod}
-            library={'hiragana'}
-            setName={'dakuon'}
-          />
-        <h2>Yoon</h2>
+            <Set
+              set={state.gojuon}
+              head={gojuonHead}
+              column={gojuonColumn}
+              columnClass={'library__column'}
+              headClass={'library__row'}
+              libraryClass={'library'}
+              selection={state.gojuonSelection}
+              buttonName={'gojuonSelection'}
+              changeMethod={changeMethod}
+              library={'hiragana'}
+              setName={'gojuon'}
+            />
+          <h2>Dakuon with Handakuon</h2>
+            <Set
+              set={state.dakuon}
+              head={dakuonHead}
+              column={dakuonColumn}
+              columnClass={'library__column--dakuon'}
+              headClass={'library__row'}
+              libraryClass={'library'}
+              selection={state.dakuonSelection}
+              buttonName={'dakuonSelection'}
+              changeMethod={changeMethod}
+              library={'hiragana'}
+              setName={'dakuon'}
+            />
+          <h2>Yoon</h2>
 
-          <Set
-            set={state.yoon}
-            head={yoonHead}
-            column={yoonColumn}
-            columnClass={'library__column--yoon'}
-            headClass={'library__row--yoon'}
-            libraryClass={'library--yoon'}
-            selection={state.yoonSelection}
-            buttonName={'yoonSelection'}
-            changeMethod={changeMethod}
-            library={'hiragana'}
-            setName={'yoon'}
-          />
+            <Set
+              set={state.yoon}
+              head={yoonHead}
+              column={yoonColumn}
+              columnClass={'library__column--yoon'}
+              headClass={'library__row--yoon'}
+              libraryClass={'library--yoon'}
+              selection={state.yoonSelection}
+              buttonName={'yoonSelection'}
+              changeMethod={changeMethod}
+              library={'hiragana'}
+              setName={'yoon'}
+            />
 
-        <Link href="/" as="/">
-          <a>Back</a>
-        </Link>
+          <Link href="/" as="/">
+            <a>Back</a>
+          </Link>
       </>
     );
 };
