@@ -68,15 +68,6 @@ const Katakana = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Learn Katakana fast!!" />
         <title>Katakana | The Kana</title>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142294407-2"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-142294407-2');`,
-        }}>
-        </script>
 
       </Head>
 
@@ -84,6 +75,7 @@ const Katakana = () => {
         <Header />
         <h1>Katakana</h1>
 
+      <h2>Gojuon</h2>
 
           {/* GOJUON */}
           <Set
@@ -99,6 +91,7 @@ const Katakana = () => {
             library={'katakana'}
             setName={'gojuon'}
           />
+      <h2>Dakuon with Handakuon</h2>
 
           <Set
             set={state.dakuon}
@@ -113,6 +106,7 @@ const Katakana = () => {
             library={'katakana'}
             setName={'dakuon'}
           />
+      <h2>Yoon</h2>
 
           <Set
             set={state.yoon}

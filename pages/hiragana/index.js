@@ -67,15 +67,7 @@ const Hiragana = () => {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Learn Hiragana fast!!" />
           <title>Hiragana | The Kana</title>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142294407-2"></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'UA-142294407-2');`,
-          }}>
-          </script>
         </Head>
 
           <Nav />

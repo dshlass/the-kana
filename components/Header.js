@@ -3,7 +3,6 @@ import '../styles/Master.scss'
 
 const Header = () => (
   <header>
-
   </header>
 );
 

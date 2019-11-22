@@ -153,24 +153,15 @@ const Set = () => {
   ) : (
     <>
       <Head>
-        <title>Hiragana Test</title>
+        <title>Katakana Test</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Free hiragana test." />
-        <title>Hiragana Test | The Kana</title>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142294407-2"></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-142294407-2');`,
-          }}>
-          </script>
+        <title>Katakana Test | The Kana</title>
       </Head>
 
       <Nav />
       <Header />
-      <h1>Test</h1>
+        <h1>Katakana Test</h1>
         <h2>
           Score: {state.score}/{test.length}
         </h2>
