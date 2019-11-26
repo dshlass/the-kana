@@ -186,7 +186,7 @@ const Katakana = () => {
         library={'katakana'}
         setName={'gojuon'}
       />
-      <h2>Dakuon with Handakuon</h2>
+      <h2 className="library__title">Dakuon with Handakuon</h2>
       <Set
         set={state.dakuon}
         head={dakuonHead}
@@ -200,7 +200,7 @@ const Katakana = () => {
         library={'katakana'}
         setName={'dakuon'}
       />
-      <h2>Yoon</h2>
+      <h2 className="library__title">Yoon</h2>
       <Set
         set={state.yoon}
         head={yoonHead}
@@ -214,10 +214,11 @@ const Katakana = () => {
         library={'katakana'}
         setName={'yoon'}
       />
-      <Link href="/" as="/">
-        <a>Back</a>
-      </Link>
-      >
+      <div className="back-button__container">
+        <Link href="/" as="/" >
+          <a className="button back-button">Back</a>
+        </Link>
+      </div>
     </>
   );
 };

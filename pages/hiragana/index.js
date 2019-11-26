@@ -187,7 +187,7 @@ const Hiragana = () => {
         library={'hiragana'}
         setName={'gojuon'}
       />
-      <h2>Dakuon with Handakuon</h2>
+      <h2 className="library__title">Dakuon with Handakuon</h2>
       <Set
         set={state.dakuon}
         head={dakuonHead}
@@ -201,7 +201,7 @@ const Hiragana = () => {
         library={'hiragana'}
         setName={'dakuon'}
       />
-      <h2>Yoon</h2>
+      <h2 className="library__title">Yoon</h2>
 
       <Set
         set={state.yoon}
@@ -217,9 +217,11 @@ const Hiragana = () => {
         setName={'yoon'}
       />
 
-      <Link href="/" as="/">
-        <a>Back</a>
-      </Link>
+      <div className="back-button__container">
+        <Link href="/" as="/" >
+          <a className="button back-button">Back</a>
+        </Link>
+      </div>
     </>
   );
 };

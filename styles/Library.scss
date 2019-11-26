@@ -8,6 +8,10 @@
   @extend %library-base;
   grid-template-columns: repeat(5, minmax(50px, 100px));
 
+  &__title {
+    margin-top: 100px;
+  }
+
   &--yoon {
     @extend %library-base;
     grid-template-columns: repeat(3, minmax(50px, 100px));
