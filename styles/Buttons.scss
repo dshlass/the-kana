@@ -11,8 +11,23 @@
   border: 1px solid black;
   text-align: center;
   text-decoration: none;
+  color: $primary-text;
+  cursor: pointer;
 
   &:first-child {
     margin-right: 60px;
+  }
+}
+
+.back-button {
+  margin-top: 40px;
+  text-align: center;
+  &:first-child {
+    margin-right: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 // import PropTypes from "prop-types";
-import Head from "next/head";
-import Nav from "../../components/nav";
-import Link from 'next/link'
-import { useRouter } from "next/router";
-import Header from "../../components/Header";
-import katakana from "../../data/katakana.json";
+import Head from 'next/head';
+import Nav from '../../components/nav';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Header from '../../components/Header';
+import katakana from '../../data/katakana.json';
 
 const setLibrary = (set, data) => {
-  if (set === "gojuon") {
-    return data.filter(item => item.table === "gojuon");
+  if (set === 'gojuon') {
+    return data.filter(item => item.table === 'gojuon');
   }
-  if (set === "dakuon") {
-    return data.filter(item => item.table === "dakuon");
+  if (set === 'dakuon') {
+    return data.filter(item => item.table === 'dakuon');
   }
-  if (set === "yoon") {
-    return data.filter(item => item.table === "yoon");
-  }
-  else return data;
+  if (set === 'yoon') {
+    return data.filter(item => item.table === 'yoon');
+  } else return data;
 };
 
 //shuffling the answerArray
@@ -53,7 +52,7 @@ const randomizeCards = arr => {
 const gamify = (remainderArray, fullSet) => {
   const placeholder = [...remainderArray];
   const answerArray = [];
-  let question = "";
+  let question = '';
 
   //random value from placeholder array
   const val = Math.floor(Math.random() * placeholder.length);
@@ -104,46 +103,54 @@ const Set = () => {
   }, [set]);
 
   const playAudio = () => {
-    var audio = new Audio(`../static/${state.test.question.table}/${state.test.question.letter}.mp3`);
+    var audio = new Audio(
+      `../static/${state.test.question.table}/${state.test.question.letter}.mp3`
+    );
     audio.play();
-  }
+  };
 
   const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
 
-    const allButtons = document.querySelectorAll("button")
-    console.log(allButtons)
+    const allButtons = document.querySelectorAll('button');
+    console.log(allButtons);
 
     if (answer !== question && placeholder.length > 0) {
-      allButtons.forEach( item => {
-        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
-      })
-      playAudio()
+      allButtons.forEach(item => {
+        item.id === question
+          ? (item.style.backgroundColor = '#abebc6')
+          : (item.style.backgroundColor = '#f1948a');
+      });
+      playAudio();
       setTimeout(() => {
         allButtons.forEach(item => {
-         item.style.backgroundColor = '';
-        })
+          item.style.backgroundColor = '';
+        });
         setState({
-          ...state, test: gamify(placeholder, fullSet) });
+          ...state,
+          test: gamify(placeholder, fullSet)
+        });
       }, 1000);
     }
 
     if (answer === question && placeholder.length > 0) {
-      allButtons.forEach( item => {
-        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
-      })
-      playAudio()
+      allButtons.forEach(item => {
+        item.id === question
+          ? (item.style.backgroundColor = '#abebc6')
+          : (item.style.backgroundColor = '#f1948a');
+      });
+      playAudio();
       setTimeout(() => {
         allButtons.forEach(item => {
-         item.style.backgroundColor = '';
-        })
-          setState({
-            ...state,
-            test: gamify(placeholder, fullSet),
-            score: state.score + 1,
-            click: 0
-          });
+          item.style.backgroundColor = '';
+        });
+        setState({
+          ...state,
+          test: gamify(placeholder, fullSet),
+          score: state.score + 1,
+          click: 0
+        });
       }, 1000);
     }
   };
@@ -159,40 +166,42 @@ const Set = () => {
         <title>Katakana Test | The Kana</title>
       </Head>
 
-      <Nav />
       <Header />
-        <h1>Katakana Test</h1>
-        <h2>
-          Score: {state.score}/{test.length}
-        </h2>
+      <h1>Katakana Test</h1>
+      <h2>
+        Score: {state.score}/{test.length}
+      </h2>
       {state.test.placeholder.length ? (
-          <div className="test">
-            <p className="test__question">{state.test.question.symbol}</p>
-            <ul className="test__button-grid">
-              {(state.test.answerArray || []).map((item, index) => (
-                <button
-                  className="test__answer"
-                  id={item.symbol}
-                  onClick={e => handleGame(index, state.test.placeholder, test, e)}
-                  key={index}
-                >
-                  {item.letter}
-                </button>
-              ))}
-            </ul>
-          </div>
+        <div className="test">
+          <p className="test__question">{state.test.question.symbol}</p>
+          <ul className="test__button-grid">
+            {(state.test.answerArray || []).map((item, index) => (
+              <button
+                className="test__answer"
+                id={item.symbol}
+                onClick={e => handleGame(index, state.test.placeholder, test, e)}
+                key={index}
+              >
+                {item.letter}
+              </button>
+            ))}
+          </ul>
+        </div>
       ) : (
         <p>Game completed</p>
       )}
-      <Link href="/katakana">
-        <a
-          onMouseEnter={() => {
-            router.prefetch('/katakana');
-          }}
-        >
-          Back
-        </a>
-      </Link>
+      <div className="back-button__container">
+        <Link href="/katakana">
+          <a
+            className="button back-button"
+            onMouseEnter={() => {
+              router.prefetch('/katakana');
+            }}
+          >
+            Back
+          </a>
+        </Link>
+      </div>
     </>
   );
 };

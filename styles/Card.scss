@@ -19,6 +19,11 @@
 .front {
   font-size: 1.75rem;
   font-weight: 600;
+
+  &__symbol {
+    color: $japan-red;
+    -webkit-text-stroke: 0.5px black;
+  }
 }
 
 .back {

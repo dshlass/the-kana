@@ -4,14 +4,15 @@ import { useRouter } from 'next/router';
 
 
 const Nav = () => {
-    const router = useRouter();
+  const router = useRouter();
 
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="navigation">
+      <ul className="navigation__container">
+        <li className="navigation__item">
           <Link href="/">
             <a
+              className="navigation__link"
               onMouseEnter={() => {
                 router.prefetch('/');
               }}
@@ -20,9 +21,10 @@ const Nav = () => {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="navigation__item">
           <Link href="/hiragana/" as="/hiragana">
             <a
+              className="navigation__link"
               onMouseEnter={() => {
                 router.prefetch('/hiragana');
               }}
@@ -31,9 +33,10 @@ const Nav = () => {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="navigation__item">
           <Link href="/katakana/" as="/katakana">
             <a
+              className="navigation__link"
               onMouseEnter={() => {
                 router.prefetch('/katakana');
               }}
@@ -43,33 +46,8 @@ const Nav = () => {
           </Link>
         </li>
       </ul>
-
-      <style jsx>{`
-        :global(body) {
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
-        }
-        nav {
-          text-align: center;
-        }
-        ul {
-          display: flex;
-          justify-content: space-between;
-        }
-        nav > ul {
-          padding: 4px 16px;
-        }
-        li {
-          display: flex;
-          padding: 6px 8px;
-        }
-        a {
-          color: #067df7;
-          text-decoration: none;
-          font-size: 13px;
-        }
-      `}</style>
     </nav>
-  );}
+  );
+}
 
 export default Nav

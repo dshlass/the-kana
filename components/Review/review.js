@@ -30,7 +30,6 @@ const Review = ({ set, head, column, columnClass, headClass, libraryClass }) => 
   );
 };
 
-
 Review.propTypes = {
   set: PropTypes.array,
   head: PropTypes.array,

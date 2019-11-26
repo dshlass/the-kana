@@ -1,5 +1,4 @@
 import React from 'react';
-// import './card.scss';
 import PropTypes from 'prop-types';
 
 const Card = ({ cardData }) => {
@@ -7,7 +6,7 @@ const Card = ({ cardData }) => {
     <div className="flip-container" key={cardData.id}>
       <div className="flipper">
         <div className="front">
-          <p>{cardData.symbol}</p>
+          <p className="front__symbol">{cardData.symbol}</p>
         </div>
         <div className="back">
           <p>{cardData.letter}</p>
@@ -16,7 +15,6 @@ const Card = ({ cardData }) => {
     </div>
   );
 };
-
 
 Card.propTypes = {
   cardData: PropTypes.object

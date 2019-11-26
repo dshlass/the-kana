@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from '../../components/nav';
-import Link from 'next/link'
+import Link from 'next/link';
 
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
@@ -88,7 +88,7 @@ const gamify = (remainderArray, fullSet) => {
 
 const initialState = {
   loading: true,
-  score: 0,
+  score: 0
 };
 
 const Set = () => {
@@ -103,43 +103,49 @@ const Set = () => {
     setState({ ...initialState, loading: false, test: gamify(test, test) });
   }, [set]);
 
-
   const playAudio = () => {
-    var audio = new Audio(`../static/${state.test.question.table}/${state.test.question.letter}.mp3`);
+    var audio = new Audio(
+      `../static/${state.test.question.table}/${state.test.question.letter}.mp3`
+    );
     audio.play();
-  }
+  };
 
   const handleGame = (index, placeholder, fullSet, e) => {
     const question = state.test.question.symbol;
     const answer = state.test.answerArray[index].symbol;
 
-    const allButtons = document.querySelectorAll("button")
-    console.log(allButtons)
+    const allButtons = document.querySelectorAll('button');
+    console.log(allButtons);
 
     if (answer !== question && placeholder.length > 0) {
       allButtons.forEach(item => {
-        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
-      })
-      playAudio()
+        item.id === question
+          ? (item.style.backgroundColor = '#abebc6')
+          : (item.style.backgroundColor = '#f1948a');
+      });
+      playAudio();
       setTimeout(() => {
         allButtons.forEach(item => {
           item.style.backgroundColor = '';
-        })
+        });
         setState({
-          ...state, test: gamify(placeholder, fullSet)
+          ...state,
+          test: gamify(placeholder, fullSet)
         });
       }, 1000);
     }
 
     if (answer === question && placeholder.length > 0) {
       allButtons.forEach(item => {
-        item.id === question ? item.style.backgroundColor = 'green' : item.style.backgroundColor = 'red'
-      })
-      playAudio()
+        item.id === question
+          ? (item.style.backgroundColor = '#abebc6')
+          : (item.style.backgroundColor = '#f1948a');
+      });
+      playAudio();
       setTimeout(() => {
         allButtons.forEach(item => {
           item.style.backgroundColor = '';
-        })
+        });
         setState({
           ...state,
           test: gamify(placeholder, fullSet),
@@ -159,18 +165,16 @@ const Set = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Free hiragana test." />
         <title>Hiragana Test | The Kana</title>
-
       </Head>
-      <Nav />
       <Header />
       <h1>Hiragana Test</h1>
       <h2>
         Score: {state.score}/{test.length}
       </h2>
       {state.test.placeholder.length ? (
-          <div className="test">
+        <div className="test">
           <p className="test__question">{state.test.question.symbol}</p>
-            <ul className="test__button-grid">
+          <ul className="test__button-grid">
             {(state.test.answerArray || []).map((item, index) => (
               <button
                 className="test__answer"
@@ -186,15 +190,18 @@ const Set = () => {
       ) : (
         <p>Game completed</p>
       )}
-      <Link href="/hiragana">
-        <a
-          onMouseEnter={() => {
-            router.prefetch('/hiragana');
-          }}
-        >
-          Back
-        </a>
-      </Link>
+      <div className="back-button__container">
+        <Link href="/hiragana">
+          <a
+            className="button back-button"
+            onMouseEnter={() => {
+              router.prefetch('/hiragana');
+            }}
+          >
+            Back
+          </a>
+        </Link>
+      </div>
     </>
   );
 };

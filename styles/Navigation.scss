@@ -1,0 +1,23 @@
+.navigation {
+  text-align: center;
+  border-bottom: 1px solid $japan-red;
+  height: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 16px;
+  }
+
+  &__item {
+    display: flex;
+    padding: 6px 8px;
+  }
+
+  &__link {
+    color: $primary-text;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
