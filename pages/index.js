@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Nav from '../components/nav';
 import Header from '../components/Header';
-// export const config = { amp: true }
 
 const Home = () => (
   <>

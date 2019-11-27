@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from "prop-types";
 import Head from 'next/head';
-import Nav from '../../components/nav';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';

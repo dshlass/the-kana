@@ -1,9 +1,29 @@
 .navigation {
   text-align: center;
-  border-bottom: 1px solid $japan-red;
-  height: 50px;
+  border-bottom: 1px solid $japan-red-3;
+
+  &__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__border-one {
+    border-bottom: 1px solid $japan-red-2;
+  }
+
+  &__border-two {
+    border-bottom: 1px solid $japan-red-1;
+  }
+
+  &__border-three {
+    border-bottom: 1px solid $japan-red;
+  }
 
   &__container {
+    height: 50px;
     display: flex;
     justify-content: space-between;
     padding: 4px 16px;

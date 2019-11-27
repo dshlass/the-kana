@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Nav from '../../components/nav';
 
-// import { useHiragana } from "../hooks/useHiragana";
 import Set from '../../components/Set/Set';
 import katakana from '../../data/katakana.json';
 import Header from '../../components/Header';
